@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+    <head>
+        <!-- CSS設定ファイル -->
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+
+        <!-- RWD設定ファイル -->
+        <link rel="stylesheet" media="screen and (max-width: 480px)" href="css/rwd.css" />  
+
+        <!-- java scriptファイルの読込 -->
+        <script src="js/jsfile.js"></script>
+
+        <!-- telの自動変換機能を無効 -->
+        <meta name="format-detection" content="telephone=no">
+
+        <!-- スマホ画面の幅の倍率を原寸に指定 -->
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <!-- ファビコンの設定 -->
+        <link rel="icon" type="image/ico" href="images/tmfav39705.ico">
+
+        <!-- スマホアイコンの設定 -->
+        <link rel="apple-touch-icon" href="images/icon_3g_128.png">
+
+        <!-- Font Awesome Bootstrap-->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" >        
+
+    </head>
+    <body onLoad="hideAdBar()"> <!-- ページが読み込まれた時にjs関数を実行 -->
+      <div class="wrapper">
+        <h2>リンク</h2>
+        <h3>指定URLへジャンプ a href=""</h3>
+            <a href="https://www.google.co.jp/">リンク先にジャンプ</a>
+        <h3>指定URLへ別ウィンドウでジャンプ target="_blank"</h3>
+            <a href="https://www.google.co.jp/" target="_blank">外部リンク先にジャンプ</a>
+        <h3>スマホ使用時、電話番号の自動呼出し a href="tel:xx-xxxx-xxxx"</h3>
+            <a href=tel:03-1234-5678>03-1234-5678</a>
+        <hr>
+        <h2>リスト ul ol</h2>
+        <h3>番号なしリスト : ul li</h3>
+            <h4>好きな動物</h4>
+            <ul>
+                <li>白くま</li>
+                <li>ライオン</li>
+                <li>クロヒョウ</li>
+                <li>チンパンジー</li>
+                <li>山猫</li>
+            </ul>
+        <h3>番号付きリスト : ol li</h3>
+        <h4>カレーの作り方</h4>
+            <ol>
+                <li>肉と野菜を炒める</li>
+                <li>水を入れて中火で煮込む</li>
+                <li>時々アクを取る</li>
+                <li>カレールーを入れる</li>
+                <li>とろみがつくまで弱火で煮込む</li>
+            </ol>
+        <hr>
+        <h2>定義リスト : dl dd dt</h2>
+            <dl>
+                <dt>リンゴ</dt>
+                <dd>赤い酸味のある果物</dd>
+                <dt>バナナ</dt>
+                <dd>黄色で細長い果物</dd>
+                <dd>複数の説明も可能</dd>
+            </dl>
+        <h2>テーブル : table tr th td</h2>
+        <table>
+            <caption>ＡＢＣ幼稚園名簿</caption>
+            <thead>
+                <tr><th scope="col">生徒番号</th><th>名前</th><th>クラス</th></tr>
+            </thead>
+            <tbody>
+                <tr><td colspan="3">１期生</td></tr>
+                <tr><td>0011</td><td>山田花子</td><td rowspan="2">さくら組</td></tr>
+                <tr><td>0012</td><td>佐藤一郎</td></tr>
+                <tr><td>0021</td><td>加藤花子</td><td rowspan="3">もも組</td></tr>
+                <tr><td>0022</td><td>山本一郎</td></tr>
+                <tr><td colspan="2">２期生</td></tr>
+                <tr><td>0031</td><td>伊藤花子</td><td rowspan="2">うめ組</td></tr>
+                <tr><td>0032</td><td>山下一郎</td></tr>
+            </tbody>
+        </table>
+        <hr>
+        <h2>time要素 : time datetime=""</h2>
+            <p>具体的な日付を伝える</p>
+            <time datetime="2016-04-21">2016年4月21日</time>
+        <hr>
+        <h2>画像を表示 : img src=""</h2>
+            <h3>代替テキストの指定 alt</h3>
+            <p>
+                <img src="images/banner.jpg"  alt="夏期限定半額セール実施中！" width="240" height="100">
+            </p>        
+            <h3>画像リンク＆幅高さ指定 width="" height=""</h3>
+            <p>
+                <a href="pet_photo.html">
+                <img src="images/dog.jpg" alt="ゴールデンレトリバー" width="110" height="100">
+                </a>
+            </p>
+            <h3>図表の記述 figure</h3>
+            <p>
+                <figure>
+                    <img src="images/dog.jpg">
+                    <figcaption>見出し：ゴールデンレトリバー</figcaption>
+                </figure>
+            </p>
+        <hr>
+        <h2>入力フォーム : input type=""</h2>
+        <form action="a.php" method="post">
+        <h3>テキストボックス : type="text"</h3>
+            <p>郵便番号：
+            <input type="text" name="postal1" size="3" maxlength="3">
+            &nbsp;-&nbsp;
+            <input type="text" name="postal2" size="4" maxlength="4">
+            </p>
+        <h3>例文表示 : value="例：山田 太郎"</h3>
+            <p>名前：<input type="text" value="例：山田 太郎"></p>
+        <h3>説明の表示 : placeholder="全角で入力してください"</h3>
+            <p>名前：<input type="text" placeholder="全角で入力してください"></p>
+            <hr>
+        <h3>ラジオボタン : type="radio"</h3>
+            <p>評価</p>
+            <input type="radio" name="eval" value="good">良い
+            <input type="radio" name="eval" value="normal" checked>普通
+            <input type="radio" name="eval" value="bad">悪い
+            <hr>
+        <h3>チェックボックス : type="checkbox"</h3>
+            <p>ジャンル</p>
+            <input type="checkbox" name="food" value="ja">和風<br>
+            <input type="checkbox" name="food" value="ch" checked>中華<br>
+            <input type="checkbox" name="food" value="fr">フレンチ<br>
+        <hr>
+        <h3>送信ボタン : type="submit"</h3>
+            <div>
+                <input type="submit" value="実行">
+            </div>
+            <hr>
+        <h3>その他</h3>
+            <table>
+                <caption>その他Inputフォーム</caption>
+                <tr><td>メール: type="email"/td<td><input type="email" name="email"></td></tr>
+                <tr><td>URL: type="url" </td><td><input type="url" name="url"></td></tr>
+                <tr><td>検索: type="search" </td><td><input type="search" name="search"></td></tr>
+                <tr><td>電話: type="tel" </td><td><input type="tel" name="tel"></td></tr>
+                <tr><td>数値: type="number" </td><td><input type="number" name="number"></td></tr>
+                <tr><td>日付: type="date" </td><td><input type="date" name="date"></td></tr>
+                <tr><td>日時: type="datetime-local" </td><td><input type="datetime-local" name="datetime"></td></tr>
+                <tr><td>月: type="month" </td><td><input type="month" name="month"></td></tr>
+                <tr><td>週: type="week" </td><td><input type="week" name="week"></td></tr>
+                <tr><td>時間: type="time" </td><td><input type="time" name="time"></td></tr>
+                <tr><td>レンジ: type="range" </td><td><input type="range" name="range"></td></tr>
+                <tr><td>色: type="color" </td><td><input type="color" name="color"></td></tr>
+                <tr><td>送信: type="submit" </td><td><input type="submit" value="送信"></td></tr>
+            </table>
+        </form>
+        <hr>
+        <h2>GoogleMapの設定 : iframe</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.5630602675824!2d139.7739940507206!3d35.71236853577402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188e9e93d3060b%3A0x6c89b36d7b4f9244!2z5LiK6YeO6aeF!5e0!3m2!1sja!2sjp!4v1489888958576" width="600" height="480" frameborder="0" style="border:0" allowfullscreen>
+            </iframe>        
+        <hr>
+        <h2>Youtubeの設定 : iframe</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/BbeLTY9igMA?ecver=1" frameborder="0" allowfullscreen>
+            </iframe>        
+        <hr>
+        <h2>Font Awesomeの使用例</h2>
+            <p>Font Awesomeのアイコン一覧ページから使用したいアイコンを選択する<br>
+               画像サイズは様々だが16か32pxの正方形で作成する。
+            </p>
+            <div><a href="http://fontawesome.io/icons/" target="_blank">Font Awesomeダウンロード</a></div>
+
+        <h3>通常表示</h3>
+            <i class="fa fa-send-o"></i><br/><br/>
+        <h3>180度回転 : fa-rotate-180</h3>
+            <i class="fa fa-send-o fa-rotate-180"></i><br/><br/>
+        <h3>水平に横軸反転 : fa-flip-horizontal</h3>
+            <i class="fa fa-send-o fa-flip-horizontal"></i><br/><br/>
+        <h3>垂直に縦軸反転 : fa-flip-vertical</h3>
+            <i class="fa fa-send-o fa-flip-vertical"></i><br/>
+        <h3>2つのアイコンを重ねて表示 : fa-stack</h3>
+            <p>１．fa-square　<i class="fa fa-square"></i>　２．fa-apple　<i class="fa fa-apple"></i></p>
+            <p>１．を倍率２倍表示に、２．を倍率１倍で白黒反転にし、２つを重ねて表示</p>
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-square fa-stack-2x"></i> <!-- 倍率２倍に表示 -->
+                <i class="fa fa-apple fa-stack-1x fa-inverse"></i> <!--倍率１倍 色反転 -->
+            </span>
+        <h3>アイコンを回転表示 : @keyframes spin</h3>
+            <span class="fa fa-spinner fa-lg"></span> <!-- CSSでアニメ設定 -->
+        <br/>
+        <h3>アイコンをｈ２要素の前に表示する</h3>
+            <div id="icondsp">
+                <h2><i class="fa fa-cutlery" aria-hidden="true"></i>　お食事メニュー</h2>
+                <h2><i class="fa fa-coffee" aria-hidden="true"></i>　ドリンクメニュー</h2>
+                <h2><i class="fa fa-heart" aria-hidden="true"></i>　デザートメニュー</h2>
+            </div>
+        <br/>
+        <hr>
+        <br/>
+        <br/>
+        <br/>
+      </div>
+    </body>
+    <!--*****************************************************************************-->
+    <style>
+        @import url("css/common.css");  /* 別のCSSファイルの読込 */
+        body {
+            min-height:550px; /* bodyの高さをデバイス画面の高さより大きく */
+        }
+        .wrapper {
+            width: 1100px;
+            margin: 0 auto;  /*画面の中央配置*/
+            padding: 0 40px;
+            box-shadow: 0 0 10px #888;
+        }
+        h2 {background-color: #f5deb3;}
+        h3 {border-left: 8px double darkred; padding-left:5px;}
+        table {border-collapse: collapse;}
+        table, th, td {border:  1px solid;}
+        caption {text-align: left;}
+
+        /*アイコンを回転表示*/
+        .fa-spinner { animation: spin 2s infinite linear;}
+        @keyframes spin {
+            0% {transform: rotate(0deg);}
+            100% {transform:rotate(359deg);}
+        }
+
+        #icondsp h2{
+             background-color: #6a1917;
+             color: white;
+             padding-left:15px;
+        }
+    </style>
+</html>

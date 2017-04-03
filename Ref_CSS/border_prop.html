@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="CSSリファレンス|文字系プロパティ">
+        <meta name="keywords" content="CSS,html,リファレンス,文字系プロパティ">
+        <title>境界線プロパティ</title>
+        <link rel="stylesheet" href="../css/init.css">
+        <link rel="stylesheet" href="css/style_border.css">
+    </head>
+    <body>
+     <div class="wrapper">
+        <h1>CSSリファレンス</h1>
+        <div id="Ret"><a href="../index.html">WEB開発入門 メニューに戻る</a></div>
+        <nav>
+            <table>
+                <tr>
+                    <td><a href="char_prop.html">文字系プロパティ</a></td>
+                    <td><a href="border_prop.html">境界線とリストとテーブル</a></td>
+                    <td><a href="bkgrd_prop.html">サイズと背景画像</a></td>
+                    <td><a href="#">継承による優先順位</a></td>
+                    <td><a href="pseudo_slct.html">疑似セレクタ</a></td>
+                </tr>
+            </table>
+        </nav>
+        <h2>境界線とリストとテーブル</h2>
+            <ul>
+                <li><a href="#BorderWidth">境界線の太さ border-width</a></li>
+                <li><a href="#BorerStyle">境界線のデザイン border-style</a></li>
+                <li><a href="#BorderColor">境界線の色  border-color</a></li>
+                <li><a href="#Border">境界線一括指定  border</a></li>
+                <li><a href="#BorderEachSide">境界線各辺の指定  top/right/bottom/left</a></li>
+                <li><a href="#BorderRadius">境界線の角  border-radius</a></li>
+                <li><a href="#BorderImageEach">境界画像(個別指定) source/slice/outset/repeat</a></li>
+                <li><a href="#BorderImage">境界画像(一括指定) border-image</a></li>
+                <li><a href="#ListStyleImage">リストマーカーに画像指定 list-style-image</a></li>
+                <li><a href="#ListStylePosition">リストマーカーの位置指定 list-style-position</a></li>
+                <li><a href="#ListStyleType">リストマーカーの種類指定 list-style-type</a></li>
+                <li><a href="#BorderCollapse">テーブル罫線を(1px)にする border-collapse</a></li>
+                <li><a href="#BorderSpacing">テーブルとセルの罫線に隙間を指定 border-spacing</a></li>
+                <li><a href="#TableLayout">セル幅の指定 table-layout</a></li>
+                <li><a href="#VerticalAlign">セル内文字の縦幅インデント vertical-align</a></li>
+            </ul>
+        <hr>
+       <!-- 境界線の太さ **********************************************************-->
+            <h3 id="BorderWidth">境界線の太さ border-width<a href="#">▲Top</a></h3>
+                <ul class="ul-BorderWidth">
+                    <li>継承なし　書式 ⇒ border-width: 値;</li>
+                       <p>＜値＞px, thin(細い), medium(普通), thick(太い)<br>
+                          ※基本ｐｘで細かい指定をするため、<strong>px以外</strong>で指定する場面はほとんどない。<br>
+                          必須のプロパティ<strong>Border-style</strong>が指定されていないと、境界線は表示されない</p>
+                    <li >表示例</li>
+                       <div id="BorderWidth-001">◆ div{border-width:<strong>1px</strong>;}</div><br>
+                       <div id="BorderWidth-002">◆ div{border-width:<strong>2px</strong>;}</div><br>
+                       <div id="BorderWidth-003">◆ div{border-width:<strong>3px</strong>;}</div><br>
+                       <div id="BorderWidth-004">◆ div{border-width:<strong>thin</strong>;}</div><br>
+                       <div id="BorderWidth-005">◆ div{border-width:<strong>medium</strong>;}</div><br>
+                       <div id="BorderWidth-006">◆ div{border-width:<strong>thick</strong>;}</div>
+                </ul>
+        <hr>
+       <!-- 境界線のデザイン **********************************************************-->
+            <h3 id="BorerStyle">境界線のデザイン border-style<a href="#">▲Top</a></h3>
+                <ul class="ul-BorerStyle">
+                    <li>継承なし　書式 ⇒ border-style: 値;</li>
+                       <p>＜値＞<br>
+                               solid：実線　none：非表示(初期値)　hidden：非表示(重複時優先)　double：2本線　dotted：点線<br>
+                               dashed：破線　outset：隆起した立体影　inset：くぼんだ立体影　ridge：隆起した線　groove：くぼんだ線
+
+                       </p>
+                    <li >表示例</li>
+                       <div id="BorerStyle-001">◆ div{border-style:<strong>solid</strong>;}</div><br>
+                       <div id="BorerStyle-002">◆ div{border-style:<strong>none</strong>;}</div><br>
+                       <div id="BorerStyle-003">◆ div{border-style:<strong>hidden</strong>;}</div><br>
+                       <div id="BorerStyle-004">◆ div{border-style:<strong>double</strong>;}</div><br>
+                       <div id="BorerStyle-005">◆ div{border-style:<strong>dotted</strong>;}</div><br>
+                       <div id="BorerStyle-006">◆ div{border-style:<strong>dashed</strong>;}</div><br>
+                       <div id="BorerStyle-007">◆ div{border-style:<strong>outset</strong>;}</div><br>
+                       <div id="BorerStyle-008">◆ div{border-style:<strong>inset</strong>;}</div><br>
+                       <div id="BorerStyle-009">◆ div{border-style:<strong>ridge</strong>;}</div><br>
+                       <div id="BorerStyle-010">◆ div{border-style:<strong>groove</strong>;}</div><br>
+                </ul>
+        <hr>
+       <!-- 境界線の色 **********************************************************-->
+            <h3 id="BorderColor">境界線の色  border-color<a href="#">▲Top</a></h3>
+                <ul class="ul-BorderColor">
+                    <li>継承なし　書式 ⇒ border-color: 値;</li>
+                       <p>＜値＞カラーコード（16進）　色名
+                       </p>
+                    <li >表示例</li>
+                       <div id="BorderColor-001">◆ div{border-color:<strong>#ff0000</strong>;}</div><br>
+                       <div id="BorderColor-002">◆ div{border-color:<strong>red</strong>;}</div><br>
+                </ul>
+        <hr>
+       <!-- 境界線一括指定 **********************************************************-->
+            <h3 id="Border">境界線一括指定  border<a href="#">▲Top</a></h3>
+                <ul class="ul-Border">
+                    <li>継承なし　書式 ⇒ border: 値 値 値 ...;</li>
+                       <p>＜値＞border-width　border-style　border-color<br>
+                       ※値の順番は順不同で<strong>半角区切り</strong>で指定。<br>
+                       <strong>border-style</strong>は必須でそれ以外は省略可。省略時は<strong>初期値</strong>が適用。<br>
+                       ＜初期値＞border-width：medium　border-style：none　border-color：親要素の色を継承</p>
+                    <li >表示例</li>
+                       <div id="Border-001">◆ div{border:<strong>5px dotted blue</strong>;}</div><br>
+                       <div id="Border-002">◆ div{border:<strong>solid</strong>;}⇐ 省略</div><br>
+                </ul>
+        <hr>
+       <!-- 境界線各辺の指定 **********************************************************-->
+            <h3 id="BorderEachSide">境界線各辺の指定  top/right/bottom/left<a href="#">▲Top</a></h3>
+                <ul class="ul-BorderEachSide">
+                    <li>継承なし　書式 ⇒ border-top: 値; / border-right: 値; / border-bottom: 値; / border-left: 値;</li>
+                       <p>＜値＞border-width　border-style　border-color<br>
+                       ※各辺の境界線を一括指定する<br>
+                       border-top（上部線）、border-right（右側線）、border-bottom（下部線）、border-left（左側線）</p>
+                    <li >表示例</li>
+                       <div id="BorderEachSide-001">
+                        ◆ div{<br>
+                            <strong>border-left</strong>: 5px solid orange;<br>
+                            <strong>border-bottom</strong>: 1px dotted #333;<br>
+                            <strong>border-top</strong>: 3px solid #333;<br>
+                            <strong>border-right</strong>: 5px solid blue;<br>
+                            }
+                      </div>
+                </ul>
+        <hr>
+       <!-- 境界線の角 **********************************************************-->
+            <h3 id="BorderRadius">境界線の角  border-radius<a href="#">▲Top</a></h3>
+                <ul class="ul-BorderRadius">
+                    <li>継承なし　書式 ⇒ border-radius:  値 値 値 値;</li>
+                       <p>＜値＞px <br>
+                       ※各角の滑らかさを一括指定する。<br>
+                       値の設定順：左上 右上 右下 左下。<strong>指定なしは0</strong>にする。</p>
+                    <li >表示例</li>
+                       <div id="BorderRadius-001">◆ div{border-radius:<strong> 0 0 5px 10px</strong>}</div><br>
+                    <li >border-radiusで円形を描画</li>
+                         ◆ div{width: <strong>100px</strong>; height: <strong>100px</strong>;<br>
+                            background-color: red;<br>
+                            border-radius:<strong>50px</strong>;}                           
+                       </p>
+                       <div id="BorderRadius-002"></div>
+                </ul>
+            <hr>
+       <!-- 境界画像プロパティの個別指定**********************************************************-->
+            <h3 id="BorderImageEach">境界画像プロパティの個別指定 source/slice/outset/repeat<a href="#">▲Top</a></h3>
+                <ul class="ul-BorderImageEach">
+                    <li>境界画像のパス 書式 ⇒ border-image-source: 値;</li>
+                       <p>＜値＞ url("xxxx.jpg") <br>
+                       ※境界線の代わりに画像を表示します。表示する画像のパスを指定。</p>
+                    <li>境界画像の位置の割り当て 書式 ⇒ border-image-slice : 値;</li>
+                       <p>＜値＞ ピクセル数値<br>
+                       ※各辺の分割位置（単位なし）</p>
+                    <li>境界画像の外側配置 書式 ⇒ border-image-outset : 値;</li>
+                       <p>＜値＞ px<br>
+                        境界画像の外側配置表示領域を拡大</p>
+                    <li>境界画像の外側配置 書式 ⇒ border-image-repeat : 値;</li>
+                       <p>＜値＞<br>
+                       <dl>
+                        <dt><strong>repeat</strong>:</dt>
+                            <dd>画像がSliceで指定されたサイズで繰り返しタイル状に囲む。<br>
+                            縦横のサイズがSliceした数値で割り切れない場合は画像が崩れる</dd>
+                        <dt><strong>round</strong></dt>
+                            <dd>画像がSliceで指定されたサイズで繰り返しタイル状に囲む。<br>
+                            縦横のサイズがSliceした数値で画像がきれいに並ぶように拡大縮小する</dd>
+                        <dt><strong>stretch</strong></dt>
+                            <dd>繰り返しなしで画像が引き延ばされて周りを囲む。</dd>
+                        <dt><strong>space</strong></dt>
+                            <dd>完全に収まる最大回数の繰り返しを行った後<br>
+                            画像を等間隔に隙間を空けて並べます。</dd>
+                       </dl>
+                        stretch repeat space<br>
+                        境界画像の外側配置表示領域を拡大</p>
+                    <li >表示例 1.</li>
+                    <br>
+                    <table id="BorderImageEach-001">
+                        <tr>
+                            <th>元画像<br>縦300px 横300px</th>
+                            <th>slice:100<br>repeat:<strong>repeat</strong></th>
+                            <th>slice:100<br>repeat:<strong>round</strong></th>
+                            <th>slice:100<br>repeat:<strong>stretch</strong></th>
+                            <th>slice:100<br>repeat:<strong>space</strong></th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="images/image-1.jpg" id="BorderImageEach-002">
+                            </td>
+                            <td>
+                                <div id="BorderImageEach-003"></div>
+                            </td>
+                            <td>
+                                <div id="BorderImageEach-004"></div>
+                            </td>
+                            <td>
+                                <div id="BorderImageEach-005"></div>
+                            </td>
+                            <td>
+                                <div id="BorderImageEach-006"></div>
+                            </td>
+                        </tr>
+                    </table>
+                </ul>
+            <hr>
+       <!-- 境界画像一括指定**********************************************************-->
+            <h3 id="BorderImage">境界画像一括指定 border-image<a href="#">▲Top</a></h3>
+                <ul class="ul-BorderImage">
+                    <li>継承なし　境界画像一括指定　書式 ⇒ border-image: source　slice / width / outset repeat;</li>
+                       <p>＜値＞<br>
+                    <dl>
+                        <dt>source:</dt>
+                            <dd>初期値：none　url("xxx.jpg")</dd>　
+                        <dt>slice:</dt>
+                            <dd>初期値：100％　単位なしピクセル数値　</dd>
+                        <dt>width:</dt>
+                            <dd>初期値：1px　sliceした画像のサイズを指定する px　省略可</dd>
+                        <dt>outset:</dt>
+                            <dd>初期値：0px　px　省略可</dd>
+                        <dt>repeat:</dt>
+                            <dd>初期値：stretch　repeat, round, stretch, space</dd>
+                    </dl>
+                    <li >表示例</li>
+                       <p>div{<br>
+                            width:80px;height:80px;<br>
+                            border: solid 25px transparent;<br>
+                            border-image: url("../images/image-1.jpg") 100 /20px/0px round;<br>
+                        }</p>                        
+                       <div id="BorderImage-001"></div>
+                </ul>
+            <hr>
+       <!-- リストマーカーに画像指定**********************************************************-->
+            <h3 id="ListStyleImage">リストマーカーに画像指定 list-style-image<a href="#">▲Top</a></h3>
+                <ul class="ul-ListStyleImage">
+                    <li>継承なし　書式 ⇒ list-style-image : 値;</li>
+                       <p>＜値＞ px<br>
+                       </p>
+                    <li >表示例</li>
+                       <div id="ListStyleImage-001"></div>
+                </ul>
+            <hr>
+       <!-- リストマーカーの位置指定**********************************************************-->
+            <h3 id="ListStylePosition">リストマーカーの位置指定 list-style-position<a href="#">▲Top</a></h3>
+                <ul class="ul-ListStylePosition">
+                    <li>継承なし　書式 ⇒ list-style-position : 値;</li>
+                       <p>＜値＞ px<br>
+                       </p>
+                    <li >表示例</li>
+                       <div id="ListStylePosition-001"></div>
+                </ul>
+            <hr>
+       <!-- リストマーカーに画像指定**********************************************************-->
+            <h3 id="ListStyleType">リストマーカーの種類指定 list-style-type<a href="#">▲Top</a></h3>
+                <ul class="ul-ListStyleType">
+                    <li>継承なし　書式 ⇒ list-style-type : 値;</li>
+                       <p>＜値＞ px<br>
+                       </p>
+                    <li >表示例</li>
+                       <div id="ListStyleType-001"></div>
+                </ul>
+            <hr>
+       <!-- テーブル罫線を(1px)にする**********************************************************-->
+            <h3 id="BorderCollapse">テーブル罫線を(1px)にする border-collapse<a href="#">▲Top</a></h3>
+                <ul class="ul-BorderCollapse">
+                    <li>継承なし　書式 ⇒ border-collapse : 値;</li>
+                       <p>＜値＞ px<br>
+                       </p>
+                    <li >表示例</li>
+                       <div id="BorderCollapse-001"></div>
+                </ul>
+            <hr>
+       <!-- テーブルとセルの罫線に隙間を指定**********************************************************-->
+            <h3 id="BorderSpacing">テーブルとセルの罫線に隙間を指定 border-spacing<a href="#">▲Top</a></h3>
+                <ul class="ul-BorderSpacing">
+                    <li>継承なし　書式 ⇒ border-spacing : 値;</li>
+                       <p>＜値＞ px<br>
+                       </p>
+                    <li >表示例</li>
+                       <div id="BorderSpacing-001"></div>
+                </ul>
+            <hr>
+       <!-- セル幅の指定**********************************************************-->
+            <h3 id="TableLayout">セル幅の指定 table-layout<a href="#">▲Top</a></h3>
+                <ul class="ul-TableLayout">
+                    <li>継承なし　書式 ⇒ table-layout : 値;</li>
+                       <p>＜値＞ px<br>
+                       </p>
+                    <li >表示例</li>
+                       <div id="TableLayout-001"></div>
+                </ul>
+            <hr>
+       <!-- テーブルとセルの罫線に隙間を指定**********************************************************-->
+            <h3 id="VerticalAlign">セル内文字の縦幅インデント vertical-align<a href="#">▲Top</a></h3>
+                <ul class="ul-VerticalAlign">
+                    <li>継承なし　書式 ⇒ vertical-align : 値;</li>
+                       <p>＜値＞ px<br>
+                       </p>
+                    <li >表示例</li>
+                       <div id="VerticalAlign-001"></div>
+                </ul>
+            <hr>
+       </div>
+    </body>
+</html>

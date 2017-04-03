@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="CSSリファレンス|文字系プロパティ">
+        <meta name="keywords" content="CSS,html,リファレンス,文字系プロパティ">
+        <title>自由な配置</title>
+        <link rel="stylesheet" href="../css/init.css">
+        <link rel="stylesheet" href="css/s-init.css">
+        <link rel="stylesheet" href="css/style_position.css">
+    </head>
+    <body>
+      <div class="wrapper">
+        <h1>CSSスタイルリファレンス</h1>
+        <div><a href="../index.html">WEB開発入門 メニューに戻る</a></div>
+        <nav>
+            <table>
+                <tr>
+                    <td><a href="padding.html">余白とボックス<br>padding/margin</a></td>
+                    <td><a href="float.html">横並びと解除<br>float</a></td>
+                    <td><a href="position.html">自由な配置<br>position</a></td>
+                    <td><a href="animation.html">接頭辞と要素の変形<br>Transforme</a></td>
+                    <td><a href="display.html">ボックスの機能変換<br>BlockBox/InlineBox</a></td>
+                    <td><a href="RWD.html">レスポンシブWebデザイン(RWD)<br>スマホ対応</a></td>
+                    <td><a href="other.html">その他<br>other</a></td>
+                </tr>
+            </table>
+        </nav>
+        <br>
+        <h2>自由な配置</h2>
+            <ul>
+                <li><a href="#Positon">自由配置　positionプロパティ</a></li>
+                <li><a href="#Place">配置場所　top/bottom/left/right</a></li>
+                <li><a href="#Relative">relative（相対位置）の使用例</a></li>
+                <li><a href="#Absolute">absolute（絶対位置）の使用例</a></li>
+                <li><a href="#Fixed">fixed（固定位置）の使用例</a></li>
+                <li><a href="#BasicUse">一般的な使用例</a></li>
+                <li><a href="#ZIndex">上下の重なり順　z-index</a></li>
+                <li><a href="#Appli1">positionプロパティ応用例１</a></li>
+                <li><a href="#Appli2">positionプロパティ応用例２</a></li>
+                
+            </ul>
+        <hr>
+       <!-- 自由配置 **********************************************************-->
+         <section id="Positon">
+            <h3>自由配置　positionプロパティ　<a href="#">▲Top</a></h3>
+                <ul>
+                    <li>書式 ⇒ position: 値;</li>
+                       <p>＜値＞<br>
+                       <strong>relative</strong>：左上に詰まっていく配置<br>
+                       <strong>absolute</strong>：親要素を基準にした絶対位置への配置<br>
+                       <strong>fixed</strong>：absoluteをベースにスクロール時も固定位置に配置<br>
+                       <strong>static</strong>：位置の指定を行わない(初期値)
+                </ul>
+         <section>
+        <hr>
+       <!-- 配置場所 **********************************************************-->
+         <section id="Place">
+            <h3>配置場所　top/botto/left/rightプロパティ　<a href="#">▲Top</a></h3>
+                <ul>
+                    <li>書式 ⇒ top: 値;　botto: 値;　left: 値;　right: 値;</li>
+                       <p>＜値＞ px ※マイナス数値を指定すると<strong>逆方向</strong>へ位置がズレる<br>
+                       <strong>top</strong>：上からのY座標　<strong>bottom</strong>：下からのY座標<br>
+                       <strong>left</strong>：左からのX座標　<strong>right</strong>：右からのX座標<br></p>
+                       <p>※起点となる場所は、positionプロパティで指定された要素の<strong>各位置最端</strong></p>
+                </ul>
+         <section>
+        <hr>
+       <!-- **********************************************************************-->
+       <!-- relative使用例 -->
+       <!-- **********************************************************************-->
+         <section id="relative">
+           <h3>relative（相対位置）の使用例　<a href="#">▲Top</a></h3>
+                <p>前要素<strong>h2</strong>から画像の上まで<strong>20px</strong>、前要素<strong>h2</strong>から画像の左まで<strong>10px</strong></p>
+                <p>※<strong>前要素が無い場合</strong>は親要素(ブラウザ含む)の<strong>左上</strong>が基点</p>
+                
+
+               <!-- 使用例 1 -->
+                        <div class="div-htm"><p>HTML記述
+                            <pre>
+&lt;<strong>h2</strong>>ゴールデンレトリバー&lt;<strong>/h2</strong>&gt;
+&lt;<strong>img</strong> src="dog.jpg"&gt;
+                            </pre></p>
+                        </div>
+                        <div class="div-css"><p>CSS記述
+                            <pre>
+<strong>img</strong> {
+ position:<strong>relative</strong>;
+ top: 20px;
+ left: 10px;
+}　
+                            </pre></p>
+                        </div>
+                        <div class="div-Brw"><p>ブラウザ表示</p>
+                            <div class="box-relative">
+                                <h2>ゴールデンレトリバー</h2>
+                                <img src="images/dog.jpg">
+                            </div>
+                        </div>
+
+         <section>
+        <hr>
+
+       <!-- **********************************************************************-->
+       <!-- absolute使用例 -->
+       <!-- **********************************************************************-->
+         <section id="Absolute">
+            <h3>absolute（絶対位置）の使用例　<a href="#">▲Top</a></h3>
+                <p>親要素を基準にした絶対位置への配置<br>
+                親要素である<strong>ブラウザの左上</strong>から画像の上まで<strong>20px</strong>、ブラウザの左端から画像の左まで<strong>10px</strong></p>
+
+                        <div class="div-htm"><p>HTML記述
+                            <pre>
+&lt;<strong>h2</strong>>ゴールデンレトリバー&lt;<strong>/h2</strong>&gt;
+&lt;<strong>img</strong> src="dog.jpg"&gt;
+                            </pre></p>
+                        </div>
+                        <div class="div-css"><p>CSS記述
+                            <pre>
+<strong>img</strong> {
+ position: <strong>absolute</strong>;
+ top: 20px;
+ left: 10px;
+}
+                            </pre></p>
+                        </div>
+                        <div class="div-Brw"><p>ブラウザ表示</p>
+                            <div class="box-absolute">
+                            <a href="results/absolute-result.html" 
+                            onclick="window.open('results/absolute-result.html', '_blank',
+                            'width='+w_size+', height='+h_size+', left='+l_position+', top='+t_position);return false;">結果を表示する</a>
+                            </div>
+                        </div>
+         <section>
+        <hr>
+
+       <!-- **********************************************************************-->
+       <!-- fixed使用例 -->
+       <!-- **********************************************************************-->
+         <section id="Fixed">
+            <h3>fixed（固定位置）の使用例　<a href="#">▲Top</a></h3>
+                <p>absoluteをベースにスクロール時も固定位置に配置<br>
+                <p>ブラウザを上に<strong>スクロール</strong>しても<br>
+                画像は親要素に対して絶対位置で<strong>固定される</strong><p>
+                
+
+                        <div class="div-htm"><p>HTML記述
+                            <pre>
+&lt;<strong>h2</strong>>ゴールデンレトリバー&lt;<strong>/h2</strong>&gt;
+&lt;<strong>img</strong> src="dog.jpg"&gt;
+                            </pre></p>
+                        </div>
+                        <div class="div-css"><p>CSS記述
+                            <pre>
+<strong>img</strong> {
+    position: <strong>fixed</strong>;
+    top: 200px;
+    left: 30px;
+}
+                            </pre></p>
+                        </div>
+                        <div class="div-Brw"><p>ブラウザ表示</p>
+                            <div class="box-fixed">
+                            <a href="results/fixed-result.html" 
+                            onclick="window.open('results/fixed-result.html', '_blank',
+                            'width='+w_size+', height='+h_size+', left='+l_position+', top='+t_position);return false;">結果を表示する</a>
+                            </div>
+                        </div>
+         <section>
+        <hr>
+
+       <!-- **********************************************************************-->
+       <!-- 一般的な使用例 -->
+       <!-- **********************************************************************-->
+         <section id="BasicUse">
+            <h3>一般的な使用例　<a href="#">▲Top</a></h3>
+                <li>書式</li>
+                    親要素 { position: relative; } <br>
+                    子要素 { position: absolute; top/bottom/left/right :n }<br><br>
+                    <strong>relative</strong>が指定された<strong>最も近い要素</strong>を基点にして絶対位置を指定すると、<br>
+                    ブラウザサイズが変わってもサイトに合わせた位置に固定されている。
+                </p>
+               <!-- 使用例  -->
+                        <div class="div-htm"><p>HTML記述
+                            <pre>
+&lt;<strong>div</strong>&gt;
+    &lt;h2&gt;ゴールデンレトリバー&lt;/h2&gt;
+    &lt;<strong>img</strong> src="../images/dog.jpg"&gt;&lt;/div&gt;
+&lt;/div&gt;
+                            </pre></p>
+                        </div>
+                        <div class="div-css"><p>CSS記述
+                            <pre>
+<strong>div</strong> {width: 300px;
+    height: 200px;
+    border: 1px solid #333;
+    position: <strong>relative</strong>;
+}
+<strong>img</strong> {
+    position: <strong>absolute</strong>;
+    <strong>top: 70px</strong>;
+    <strong>left: 30px</strong>;
+}
+                            </pre></p>
+                        </div>
+                        <div class="div-Brw"><p>ブラウザ表示</p>
+                            <a href="results/BasicUse-result.html" 
+                            onclick="window.open('results/BasicUse-result.html', '_blank',
+                            'width='+w_size+', height='+h_size+', left='+l_position+', top='+t_position);return false;">結果を表示する</a>
+                        </div>
+
+                <p>※<strong>relativeは位置指定をしてない</strong>のでabsoluteの基点としての機能しかない</p>
+         </section>
+         <hr>
+       <!-- **********************************************************************-->
+       <!-- 上下の重なり順 z-index -->
+       <!-- **********************************************************************-->
+         <section id="ZIndex">
+            <h3>上下の重なり順　z-indexプロパティ　<a href="#">▲Top</a></h3>
+                <ul>
+                    <li>書式 ⇒ z-index: ;</li>
+                    positionプロパティと併用し、上下の重なり順を指定
+                       <p>＜値＞<br>
+                          数値(ーマイナス値を含めた整数 単位なし) 
+                       </p>
+
+                </ul>
+         <section>
+        <hr>
+
+       <!-- **********************************************************************-->
+       <!-- 応用例１ -->
+       <!-- **********************************************************************-->
+         <section id="Appli1">
+            <h3>positionプロパティ応用例１　リストの右側に矢印を配置　<a href="#">▲Top</a></h3>
+            <p>リストの右側に矢印を配置</p>
+            <p>疑似要素を使って要素内の後ろに空のボックス（display:block）を作成し<br>
+               relative指定した親要素のliを起点に絶対位置absoluteを指定する。
+            </p>
+               <!-- 使用例  -->
+                <div class="div-htm"><p>HTML記述
+                    <pre>
+&lt;ul&gt;
+&lt;li&gt;ホーム&lt;/li&gt;
+&lt;li&gt;お知らせ&lt;/li&gt;
+&lt;li&gt;商品一覧&lt;/li&gt;
+&lt;/ul&gt;
+                    </pre></p>
+                </div>
+                <div class="div-css"><p>CSS記述
+                    <pre>
+li{width: 180px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-bottom: 5px;
+    <strong>position: relative;</strong>
+}
+
+<strong>li::after</strong> {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url("../images/arrow.jpg") 0 0 no-repeat;
+    background-size: contain;
+    <strong>position: absolute;</strong>
+    top: 8px;
+    right: 15px;
+}
+                   </pre></p>
+                 </div>
+                 <div class="div-Brw"><p>ブラウザ表示</p>
+                    <a href="results/Appli1.html" 
+                    onclick="window.open('results/Appli1.html', '_blank',
+                    'width='+w_size+', height='+h_size+', left='+l_position+', top='+t_position);return false;">結果を表示する</a>
+                 </div>
+         <section>
+        <hr>
+
+       <!-- 応用例２ **********************************************************-->
+         <section id="Appli2">
+            <h3>positionプロパティ応用例２　可変ブラウザで画面中央に要素を配置　<a href="#">▲Top</a></h3>
+               <!-- 使用例  -->
+               <p>可変ブラウザで画面の中央に要素を配置</p>
+               <p>※上下左右から絶対配置と、ボックスのサイズとマージンの自動指定autoを行う。</p>
+                <div class="div-htm"><p>HTML記述
+                    <pre>
+&lt;div&gt;&lt;/div&gt;
+                    </pre></p>
+                </div>
+                <div class="div-css"><p>CSS記述
+                    <pre>
+<strong>div</strong> {
+    <strong>position: absolute;</strong>
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 200px;
+    height: 150px;
+    <strong>margin: auto;</strong>
+    background: red;
+}
+                   </pre></p>
+                 </div>
+                 <div class="div-Brw"><p>ブラウザ表示</p>
+                     <a href="results/Appli2.html" 
+                    onclick="window.open('results/Appli2.html', '_blank',
+                    'width='+w_size+', height='+h_size+', left='+l_position+', top='+t_position);return false;">結果を表示する</a>                 </div>
+         <section>
+        <hr>
+      </div>
+    </body>
+</html>
+<script type="text/javascript">
+// 表示するウィンドウのサイズ
+var w_size=800;
+var h_size=600;
+
+// 表示するウィンドウの位置
+var l_position=Number((window.screen.width-w_size)/2);
+var t_position=Number((window.screen.height-h_size)/2);
+</script>

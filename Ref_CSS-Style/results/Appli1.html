@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <link rel="stylesheet" href="../css/sanitize.css">
+        <link rel="stylesheet" href="css/style_position.css">
+    </head>
+    <body>
+            <ul>
+            <li>ホーム</li>
+            <li>お知らせ</li>
+            <li>商品一覧</li>
+            </ul>
+        </div>
+
+     </body>
+    <!-- *********************************************************************** -->
+    <!-- CSS -->
+    <!-- *********************************************************************** -->
+    <style>
+        li{width: 180px;
+            border: 1px solid #ccc;
+            padding: 5px;
+            margin-bottom: 5px;
+            position: relative;
+        }
+
+        li::after {
+            content: "";
+            display: block;
+            width: 16px;
+            height: 16px;
+            background: url("../images/arrow.jpg") 0 0 no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: 8px;
+            right: 15px;
+        }
+    </style>
+</html>

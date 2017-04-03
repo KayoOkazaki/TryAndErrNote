@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+    <head>
+    </head>
+    <body>
+        <div id="single">
+            単独指定
+        </div>
+        <div id="bunch">
+            一括指定
+        </div>
+    </body>
+    <style>
+        #single{width:200px; height:200px;}
+        #bunch{width:200px; height:200px;}
+
+        /* 背景画像ファイルのパス */
+        #single { background-image:url("images/dog.jpg"); }
+
+        /* 位置 水平(x軸)　垂直(ｙ軸) */
+        #single { background-position:center 100px;}
+
+        /* サイズ */
+        #single { background-size:75px 76px;}
+
+        /* リピートの方向 */
+        #single {background-repeat:repeat-x;}
+
+        /* 背景色 */
+        #single { background-color:cornflowerblue;}
+
+        /* 上記全てを一括指定 */
+    /*   #bunch { background: url( "images/dog.jpg" ) center 100px / 75px 76px no-repeat #D36015 ;} */
+       #bunch { background: url("images/dog.jpg") 50% 50% / 50px 50px #D36015 ;}
+
+    </style>

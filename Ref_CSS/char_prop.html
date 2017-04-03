@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="CSSリファレンス|文字系プロパティ">
+        <meta name="keywords" content="CSS,html,リファレンス,文字系プロパティ">
+        <title>文字系プロパティ</title>
+        <link rel="stylesheet" href="../css/init.css">
+        <link rel="stylesheet" href="css/style_char.css">
+    </head>
+    <body>
+   		<div class="wrapper">
+            <h1>CSSリファレンス</h1>
+            <div><a href="../index.html">WEB開発入門 メニューに戻る</a></div>
+            <nav>
+                <table>
+                    <tr>
+                        <td><a href="char_prop.html">文字系プロパティ</a></td>
+                        <td><a href="border_prop.html">境界線リストとテーブル</a></td>
+                        <td><a href="bkgrd_prop.html">サイズと背景画像</a></td>
+                        <td><a href="#">継承による優先順位</a></td>
+                        <td><a href="pseudo_slct.html">疑似セレクタ</a></td>
+                    </tr>
+                </table>
+            </nav>
+            <h2>文字系プロパティ</h2>
+                <ul>
+                    <li><a href="#CorProp">文字色 color</a></li>
+                    <li><a href="#FontSize">サイズ font-size</a></li>
+                    <li><a href="#FontType">文字種類  font-familly</a></li>
+                    <li><a href="#FontWeight">太さ  font-Weght</a></li>
+                    <li><a href="#FontStyle">斜体  font-style</a></li>
+                    <li><a href="#LineHeight">行間  line-height</a></li>
+                    <li><a href="#LetterSpacing">字間  letter-spacing</a></li>
+                    <li><a href="#FontFeaturSettings">カーニング font-featur-settings</a></li>
+                    <li><a href="#TextIndent">字送り text-indent</a></li>
+                    <li><a href="#TextDecoration">下線 text-decoration</a></li>
+                    <li><a href="#TtextAlign">横揃え text-align</a></li>
+                    <li><a href="#VerticalAlign">高さ揃え vertical-align</a></li>
+                    <li><a href="#VerticalAlign">高さ揃え vertical-align</a></li>
+                    <li><a href="#TextShadow">影と透過(文字) text-shadow</a></li>
+                    <li><a href="#BoxShadow">影と透過(要素の背景) box-shadow</a></li>
+                    <li><a href="#opacity">影と透過(要素の透過) opacityィ</a></li>
+                </ul>
+            <hr>
+        <!-- 文字色 **********************************************************-->
+                <h3 id="CorProp">文字色  colorプロパティ　<a href="#">▲Top</a></h3>
+                    <ul>
+                        <li>継承あり　書式 ⇒ color:値;</li>
+                        <p>値：カラー名 color:red; カラーコード color:#ff0000;<br>
+                        <li>表示例</li>
+                        <span id="CorProp-001">◆カラー名で設定（red）</span>
+                        <span id="CorProp-002">◆カラーコードで設定(#ff0000)</span>
+                        </p>
+                    </ul>
+           <hr>
+        <!-- 文字サイズ ********************************************************-->
+                    <h3 id="FontSize">サイズ  font-sizeプロパティ　<a href="#">▲Top</a></h3>
+
+                        <li>継承あり　書式 ⇒ font-size:値;</li>
+                            <p>＜値＞：px, %, em, rem, </p>
+                        <li>サイズの違い</li>
+                        <table class="table-FontSize">
+                                <tr>
+                                    <th>サイズについて</th> 
+                                    <th>値</th>
+                                    <th>書式</th>
+                                    <th>表示例</th>
+                                </tr>
+                    <!-- ｈ１要素サイズ *****************************************-->
+                                <tr>
+                                    <td rowspan="4">ｈ１要素サイズ<br>と同じ</td> 
+                                    <td>ピクセル(px)</td> 
+                                    <td>font-size:32px;</td> 
+                                    <td id="FontSize-h1001">あいうえお 12345 ABCDE</td> 
+                                </tr>
+                                <tr>
+                                    <td>パーセント(%)</td> 
+                                    <td>font-size:200%;</td> 
+                                    <td id="FontSize-h1002">あいうえお 12345 ABCDE</td> 
+                                </tr>
+                                <tr>
+                                    <td>エム(em)</td> 
+                                    <td>font-size:2em;</td> 
+                                    <td id="FontSize-h1003">あいうえお 12345 ABCDE</td> 
+                                </tr>
+                                <tr>
+                                    <td>レム(rem)</td> 
+                                    <td>font-size:2rem;</td> 
+                                    <td id="FontSize-h1004">あいうえお 12345 ABCDE</td> 
+                                </tr>
+                    <!-- ｈ2要素サイズ *******************************************************-->
+                                <tr>
+                                    <td rowspan="4">ｈ２要素サイズ<br>と同じ</td> 
+                                    <td>ピクセル(px)</td> 
+                                    <td>font-size:24px;</td> 
+                                    <td id="FontSize-h2001">あいうえお 12345 ABCDE</td> 
+                                </tr>
+                                <tr>
+                                    <td>パーセント(%)</td> 
+                                    <td>font-size:150%;</td> 
+                                    <td id="FontSize-h2002">あいうえお 12345 ABCDE</td> 
+                                </tr>
+                                <tr>
+                                    <td>エム(em)</td> 
+                                    <td>font-size:1.5em;</td> 
+                                    <td id="FontSize-h2003">あいうえお 12345 ABCDE</td> 
+                                </tr>
+                                <tr>
+                                    <td>レム(rem)</td> 
+                                    <td>font-size:1.5rem;</td> 
+                                    <td id="FontSize-h2004">あいうえお 12345 ABCDE</td> 
+                                </tr>
+                    <!-- ｈ３要素サイズ ******************************************************-->
+                                <tr>
+                                    <td rowspan="4">ｈ３要素サイズ<br>と同じ</td> 
+                                    <td>ピクセル(px)</td> 
+                                    <td>font-size:18.72px;</td> 
+                                    <td id="FontSize-h3001">あいうえお 12345 ABCDE</td> 
+                                </tr>
+                                <tr>
+                                    <td>パーセント(%)</td> 
+                                    <td>font-size:117%;</td> 
+                                    <td id="FontSize-h3002">あいうえお 12345 ABCDE</td> 
+                                </tr>
+                                <tr>
+                                    <td>エム(em)</td> 
+                                    <td>font-size:1.17em;</td> 
+                                    <td id="FontSize-h3003">あいうえお 12345 ABCDE</td> 
+                                </tr>
+                                <tr>
+                                    <td>レム(rem)</td> 
+                                    <td>font-size:1.17rem;</td> 
+                                    <td id="FontSize-h3004">あいうえお 12345 ABCDE</td> 
+                                </tr>
+                    <!-- ｈ４要素サイズ ***************************************************-->
+                                <tr>
+                                    <td rowspan="4">通常のサイズ<br>p要素と同じ</td> 
+                                    <td>ピクセル(px)</td> 
+                                    <td>font-size:16px;</td> 
+                                    <td id="FontSize-h4001">あいうえお 12345 ABCDE</td> 
+                                </tr>
+                                <tr>
+                                    <td>パーセント(%)</td> 
+                                    <td>font-size:100%;</td> 
+                                    <td id="FontSize-h4002">あいうえお 12345 ABCDE</td> 
+                                </tr>
+                                <tr>
+                                    <td>エム(em)</td> 
+                                    <td>font-size:1em;</td> 
+                                    <td id="FontSize-h4003">あいうえお 12345 ABCDE</td> 
+                                </tr>
+                                <tr>
+                                    <td>レム(rem)</td> 
+                                    <td>font-size:1rem;</td> 
+                                    <td id="FontSize-h4004">あいうえお 12345 ABCDE</td> 
+                                </tr>
+                    <!-- ｈ５要素サイズ ****************************************************-->
+                                <tr>
+                                    <td rowspan="4">ｈ５要素サイズ<br>と同じ</td> 
+                                    <td>ピクセル(px)</td> 
+                                    <td>font-size:13.28px;</td> 
+                                    <td id="FontSize-h5001">あいうえお 12345 ABCDE</td> 
+                                </tr>
+                                <tr>
+                                    <td>パーセント(%)</td> 
+                                    <td>font-size:83%;</td> 
+                                    <td id="FontSize-h5002">あいうえお 12345 ABCDE</td> 
+                                </tr>
+                                <tr>
+                                    <td>エム(em)</td> 
+                                    <td>font-size:0.83em;</td> 
+                                    <td id="FontSize-h5003">あいうえお 12345 ABCDE</td> 
+                                </tr>
+                                <tr>
+                                    <td>レム(rem)</td> 
+                                    <td>font-size:0.67rem;</td> 
+                                    <td id="FontSize-h5004">あいうえお 12345 ABCDE</td> 
+                                </tr>
+                    <!-- ｈ６要素サイズ **************************************************-->
+                                <tr>
+                                    <td rowspan="4">ｈ５要素サイズ<br>と同じ</td> 
+                                    <td>ピクセル(px)</td> 
+                                    <td>font-size:10.72px;</td> 
+                                    <td id="FontSize-h6001">あいうえお 12345 ABCDE</td> 
+                                </tr>
+                                <tr>
+                                    <td>パーセント(%)</td> 
+                                    <td>font-size:67%;</td> 
+                                    <td id="FontSize-h6002">あいうえお 12345 ABCDE</td> 
+                                </tr>
+                                <tr>
+                                    <td>エム(em)</td> 
+                                    <td>font-size:0.67em;</td> 
+                                    <td id="FontSize-h6003">あいうえお 12345 ABCDE</td> 
+                                </tr>
+                                <tr>
+                                    <td>レム(rem)</td> 
+                                    <td>font-size:0.67rem;</td> 
+                                    <td id="FontSize-h6004">あいうえお 12345 ABCDE</td> 
+                                </tr>
+                        </table>
+                    <hr>
+        <!-- 文字種類 **********************************************************-->
+                    <h3 id="FontType">文字種類  font-famillyプロパティ　<a href="#">▲Top</a></h3>
+                        <ul>
+                            <li>継承あり　書式 ⇒ font-familly:値,値,値...;</li>
+                                <p>ユーザ環境に依存するため<strong>指定したフォントが表示されるとは限らない。</strong><br>
+                                ,で区切った複数のフォントを左から優先して使用可能なフォントを表示する。</p>
+                            <li>以下のように代表的なフォントを複数指定する</li>
+                                <p>font-family: Lato, "Noto Sans JP", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic,
+                                "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; </p>
+                            <li>WEBフォント（外部フォント）設定方法</li>
+                                <p>1.<a href="https://fonts.google.com/" target="_blank">Google Fonts</a> にアクセスし設定したいフォントを選び「QuickUse」ボタンをクリック。</p>
+                                <p>2.「@import」タブを選択しCSSに読込むコードをコピーし取得する。</p>
+                                <p>3.CSSファイルの上部に2.でコピーしたコードを貼り付け、font-famillyに取得したフォントを追加する。</p>
+                            <li>WEBフォント：Griffyの設定例</li>
+                                <p id="FontType-001">I watched the storm, so beautiful yet terrific.</p>
+                        </ul>
+        <!-- 太さ **************************************************************-->
+                    <h3 id="FontWeight">太さ  font-Weghtプロパティ　<a href="#">▲Top</a></h3>
+                        <ul>
+                            <li>継承あり　書式 ⇒ font-Weght:値;</li>
+                                <p>＜値＞<br>
+                                【数値指定】100　200　300　400　500　600　700　800　900　数値が上がると太さが増す。<br>
+                                ※ただし、フォントの種類によって100～900までの太さが用意されていない場合がある。<br>
+                                【キーワード指定】 lighter：細い　normal：通常　bold：太く　bolder：もう一段太く<br>
+                                　※太字にする際、強調する意味合いがある場合はhtml内でstrong要素を使用するほうが良い。</p>
+                            <li>表示例</li>
+                                <div id="table-FontWeight-01">
+                                    <p>◆ lighter：細い</p>
+                                </div>
+                                <div id="table-FontWeight-02">
+                                    <p>◆ normal：通常（数値 400と同じ）</p>
+                                </div>
+                                <div id="table-FontWeight-03">
+                                    <p>◆ bold：太く（数値 700と同じ）</p>
+                                </div>
+                                <div id="table-FontWeight-04">
+                                    <p>◆ bolder：もう一段太く</p>
+                                </div>
+                        </ul>
+        <!-- 斜体 **************************************************************-->
+                    <h3 id="FontStyle">斜体  font-styleプロパティ　<a href="#">▲Top</a></h3>
+                        <ul>
+                            <li>継承あり　書式 ⇒ font-style:値;</li>
+                                <p>＜値＞ 斜体：italic、通常：normal<br>
+                                ※斜体はブラウザによっては英字にしか効かない</p>
+                        </ul>
+        <!-- 行間 **************************************************************-->
+                    <h3 id="LineHeight">行間 line-heightプロパティ　<a href="#">▲Top</a></h3>
+                        <ul>
+                            <li>継承あり　書式 ⇒ line-height:値;</li>
+                                <p>＜値＞：px, %, em, 単位なし <br>
+                                ※単位をつけると親要素で指定した行間が子要素にも文字サイズに関係なく継承される<br>
+                                　単位をつけない場合、各要素ごとに親の行間が反映される。<strong>通常は単位をつけない。</strong></p>
+                            <li>表示例</li>
+                                <p>◆行間1 line-height:1;<br>
+                                    行間の指定なしと同じ</p>
+                                <table class="table-LineHeight1">
+                                    <tr><td>あいうえお</td></tr>
+                                    <tr><td>かきくけこ</td></tr>
+                                    <tr><td>さしすせそ</td></tr>
+                                </table>
+                                <p>◆行間2 line-height:2;<br>
+                                    指定された文字サイズの<strong>１文字分</strong>の行間（文字の上0.5文字、文字の下0.5文字の隙間）</p>
+                                <table class="table-LineHeight2">
+                                    <tr><td>あいうえお</td></tr>
+                                    <tr><td>かきくけこ</td></tr>
+                                    <tr><td>さしすせそ</td></tr>
+                                </table>
+                                <p>◆行間3 line-height3;<br>
+                                    指定された文字サイズの<strong>２文字分</strong>の行間（文字の上１文字、文字の下１文字の隙間）</p>
+                                <table class="table-LineHeight3">
+                                    <tr><td>あいうえお</td></tr>
+                                    <tr><td>かきくけこ</td></tr>
+                                    <tr><td>さしすせそ</td></tr>
+                                </table>
+                        </ul>
+        <!-- 字間 ***************************************************************-->
+                <h3 id="LetterSpacing">字間 letter-spacingプロパティ　<a href="#">▲Top</a></h3>
+                        <ul>
+                            <li>継承あり　書式 ⇒ letter-spacing:値;</li>
+                                <p>＜値＞px, em </p>
+                            <li>表示例</li>
+                                <p>◆字間10px 　<span id="LetterSpacing-001">あいうえお</span>10pxの1文字分の空き</p>
+                                <p>◆字間0.5em　<span id="LetterSpacing-002">あいうえお</span>半文字分の空き</p>
+                        </ul>
+        <!-- カーニング *********************************************************-->
+                <h3 id="FontFeaturSettings">カーニング font-featur-settingsプロパティ　<a href="#">▲Top</a></h3>
+                        <ul>
+                            <li>継承なし　書式 ⇒ font-featur-settings:値;</li>
+                                <p>＜値＞"palt" "pwid" "pkna" <a href="https://helpx.adobe.com/jp/typekit/using/open-type-syntax.html#" target="_blank">詳細はこちら</a><br>
+                                ※"で囲む必要がある</p>
+                            <li>表示例</li>
+                            <p>◆游ゴシック <strong>カーニングなし</strong><br>
+                                <span id="FontFeaturSettings-001">
+                                水馬赤いなあいうえお　浮藻に小蝦も泳いでる<br> 
+                                柿の木栗の木かきくけこ　啄木鳥こつこつ枯れ欅<br> 
+                                大角豆に酢をかけさしすせそ　その魚浅瀬で刺しました<br> 
+                                立ちましょ喇叭でたちつてと　トテトテタッタと飛び立った<br> 
+                                蛞蝓のろのろなにぬねの　納戸にぬめってなにねばる<br> 
+                                鳩ポッポほろほろはひふへほ　日向のお部屋にゃ笛を吹く<br> 
+                                蝸牛ネジ巻まみむめも　梅の実落ちても見もしまい <br>
+                                焼栗ゆで栗やいゆえよ　山田に灯のつくよいの家<br> 
+                                雷鳥寒かろらりるれろ　蓮花が咲いたら瑠璃の鳥<br> 
+                                わいわいわっしょいわゐうゑを　植木屋井戸換へお祭りだ</span></p>
+
+                            <p>◆游ゴシック <strong>font-featur-settings:pwid</strong><br>
+                                <span id="FontFeaturSettings-002">
+                                水馬赤いなあいうえお　浮藻に小蝦も泳いでる<br> 
+                                柿の木栗の木かきくけこ　啄木鳥こつこつ枯れ欅<br> 
+                                大角豆に酢をかけさしすせそ　その魚浅瀬で刺しました<br> 
+                                立ちましょ喇叭でたちつてと　トテトテタッタと飛び立った<br> 
+                                蛞蝓のろのろなにぬねの　納戸にぬめってなにねばる<br> 
+                                鳩ポッポほろほろはひふへほ　日向のお部屋にゃ笛を吹く<br> 
+                                蝸牛ネジ巻まみむめも　梅の実落ちても見もしまい <br>
+                                焼栗ゆで栗やいゆえよ　山田に灯のつくよいの家<br> 
+                                雷鳥寒かろらりるれろ　蓮花が咲いたら瑠璃の鳥<br> 
+                                わいわいわっしょいわゐうゑを　植木屋井戸換へお祭りだ</span></p>
+                        </ul>
+        <!-- 字送り *********************************************************-->
+                <h3 id="TextIndent">字送り text-indentプロパティ　<a href="#">▲Top</a></h3>
+                        <ul>
+                            <li>継承あり　書式 ⇒ text-indent:値;</li>
+                                <p>＜値＞px, em, % <br>
+                                ※画像など差替える際文字を表示しないように値に<strong>-9999</strong>で使用することがある</p>
+                            <li>表示例</li>
+                                <p id="TextIndent-001">◆字送り 1em (1文字分右にインデント)</p>
+                                <p id="TextIndent-002">◆字送り 50% (全体幅50％右にインデント)</p>
+                                <p id="TextIndent-003">◆字送り -10px (10px分左にインデント)</p>
+                        </ul>
+        <!-- 下線 *********************************************************-->
+                <h3 id="TextDecoration">下線 text-decorationプロパティ　<a href="#">▲Top</a></h3>
+                        <ul>
+                            <li>継承なし　書式 ⇒ text-decoration:値;</li>
+                                <p>＜値＞none:下線なし、underline:下線、overline:上線、line-through:取消線 <br>
+                                ※子要素に継承しない</p>
+                            <li>表示例</li>
+                            <table class="table-TextDecoration">
+                                <tr><th>none:</th><td id="TextDecoration-001">あいうえお</td></tr>
+                                <tr><th>underline:</th><td id="TextDecoration-002">あいうえお</td></tr>
+                                <tr><th>line-through:</th><td id="TextDecoration-005">あいうえお</td></tr>
+                                <tr><th>overline:</th><td id="TextDecoration-003">あいうえお</td></tr>
+                            </table>
+                        </ul>
+        <!-- 横揃え *********************************************************-->
+                <h3 id="TtextAlign">横揃え text-alignプロパティ　<a href="#">▲Top</a></h3>
+                        <ul  class="ul-TtextAlign">
+                            <li>継承あり　書式 ⇒ text-align:値;</li>
+                                <p>＜値＞left:左揃え、center:中央揃え、right:右揃え <br>
+                            <li>表示例</li>
+                                <div id="TtextAlign-001">◆left: 本日は特売日です！</div><br>
+                                <div id="TtextAlign-002">◆center: 本日は特売日です！</div><br>
+                                <div id="TtextAlign-003">◆right: 本日は特売日です！</div>
+                        </ul>
+        <!-- 高さ揃え *********************************************************-->
+                <h3 id="VerticalAlign">高さ揃え vertical-alignプロパティ　<a href="#">▲Top</a></h3>
+                        <ul>
+                            <li>継承なし　書式 ⇒ vertical-align:値;</li>
+                                <p>＜値＞super:上付き、baseline:標準、sub:下付き<br>
+                                    ※内包要素のみに継承
+                                </p>
+                            <li>表示例</li>
+                                <p>super: 本日は<span id="VerticalAlign-001">特売日</span>です！</p>
+                                <p>baseline: 本日は<span id="VerticalAlign-002">特売日</span>です！</p>
+                                <p>sub: 本日は<span id="VerticalAlign-003">特売日</span>です！</p>
+                        </ul>
+        <!-- 影と透過(文字) *********************************************************-->
+                <h3 id="TextShadow">影と透過(文字) text-shadowプロパティ　<a href="#">▲Top</a></h3>
+                        <ul>
+                            <li>継承なし　書式 ⇒ text-shadow:横のズレ値  縦のズレ値  ぼかし広がり値  影の色;</li>
+                                <p>＜値＞ズレ値とぼかし:px、影の色:カラーコード rbga(0,0,0,0) rgb(0,0,0)<br>
+                                ※<strong>文字</strong>に対して影をつける。ズレ値を<strong>マイナス指定</strong>すると<strong>反対方向にズレる</strong><br>
+                                rgba(Red,Green,Blue,Alpha) Alpha=透明度 </p>
+                            <li>表示例</li>
+                                <p id="TextShadow-001">Logo Title!</p>
+                                <p id="TextShadow-002">Logo Title!</p>
+                                <p id="TextShadow-003">Logo Title!</p>
+                            
+                            <li>text-shadow使ったさまざまなスタイル</li>
+                                <p><a href="http://coliss.com/articles/build-websites/operation/css/css-text-shadow-comilation-by-boltaway.html" target="_blank">CSSデザインコピペでOK</a></p>
+                        </ul>
+        <!-- 影と透過(要素の背景)  *********************************************************-->
+                <h3 id="BoxShadow">影と透過(要素の背景) box-shadowプロパティ　<a href="#">▲Top</a></h3>
+                    <ul>
+                        <li>継承なし　書式 ⇒ box-shadow:横のズレ値  縦のズレ値  ぼかし広がり値  影の色;</li>
+                            <p>＜値＞ズレ値とぼかし:px、影の色:カラーコード rbga(0,0,0,0) rgb(0,0,0)<br>
+                            ※<strong>要素全体</strong>に対して影をつける。<br>
+                            rgba(Red,Green,Blue,Alpha) Alpha=透明度 </p>
+                        <li>表示例</li>
+                            <p id="BoxShadow-001">Logo Title!</p>
+                        
+                        <li>グラデーションCSS自動生成サイト</li>
+                            <p><a href="http://www.colorzilla.com/gradient-editor/" target="_blank">CSS Gradient Generator</a></p>
+                    </ul>
+        <!-- 影と透過(要素の透過)  *********************************************************-->
+                <h3 id="opacity">影と透過(要素の透過) opacityプロパティ　<a href="#">▲Top</a></h3>
+                    <li>継承なし　書式 ⇒ opacity:値;</li>
+                        <p>＜値＞単位なし数値：0～1 小数点可<br>
+                        ※要素全体に対して透明度（0～1）を設定。<br>
+                        要素内に配置してある<strong>文字や画像も透過する</strong></p>
+                    <li>表示例 opacity: 0.5;</li>
+                        <div id="opacity-001">
+                            <figure>
+                                <img src="images/dog.jpg"　alt="ゴールデンレトリバー">
+                                <figcaption>ゴールデンレトリバー</figcaption>
+                            </figure>
+                        </div>
+        </div>
+    </body>
+</html>

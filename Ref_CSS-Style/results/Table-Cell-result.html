@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <link rel="stylesheet" href="../css/sanitize.css">
+    <link rel="stylesheet" href="css/style_position.css">
+</head>
+<body>
+    <h2>fixedを使用しない表示例</h2>
+    <ul class="exp1">
+       <li><a href="a.html">研修・キャリアアップ</a></li>
+       <li><a href="a.html">サービス</a></li>
+       <li><a href="a.html">製品</a></li>
+    </ul>
+    <br><br><br>
+    <h2>fixedを使用した表示例</h2>
+    <p>決められたナビゲーション幅でボタンサイズが均等に配分され文字を中央に配置する</p>
+    <ul class="exp2">
+       <li><a href="a.html">研修・キャリアアップ</a></li>
+       <li><a href="a.html">サービス</a></li>
+       <li><a href="a.html">製品</a></li>
+   </ul>
+
+</body>
+<!-- *********************************************************************** -->
+<!-- CSS -->
+<!-- *********************************************************************** -->
+<style>
+li {list-style-type: none;}
+li {border: 1px solid; border-left: none;}
+li:first-child {border-left: 1px solid;}
+
+/* fixedを使用しない表示例 */
+.exp1 {display: table; width: 80%;}
+.exp1 li {
+  display: table-cell;
+  padding: 5px;
+  text-align: center;}
+.exp1 a {display: block;}
+
+/* fixedを使用した表示例 */
+.exp2 {display: table; width: 80%;
+    table-layout: fixed;
+}
+.exp2 li {
+  padding: 5px;
+  display: table-cell;
+  text-align: center;}
+.exp2 a {display: block;}
+
+ </style>
+ </html>

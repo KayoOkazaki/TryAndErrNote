@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* スマホ画面の幅の倍率を原寸に指定 をHTMLに指定しないと機能しない*/
+
+@media screen and (max-width: 480px) {
+    .wrapper {
+        width: 100%;
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 20px;
+        width: 100%;
+        background-position: center center;
+    }
+    h2 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+    
+}
+@media screen and (orientation: landscape) {
+      -webkit-text-size-adjust: 100%; /* iPhoneを横向き時文字サイズ調整 */
+}
+

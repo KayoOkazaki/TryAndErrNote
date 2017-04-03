@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="CSSスタイル|ボックスの機能変換">
+        <meta name="keywords" content="CSSスタイル,html,リファレンス,">
+        <title>ボックスの機能変換</title>
+        <link rel="stylesheet" href="../css/init.css">
+        <link rel="stylesheet" href="css/s-init.css">
+        <link rel="stylesheet" href="css/style_display.css">
+    </head>
+    <body>
+     <div class="wrapper">
+        <header>
+            <h1>CSSスタイルリファレンス</h1>
+            <div id="Ret"><a href="../index.html">WEB開発入門 メニューに戻る</a></div>
+            <nav>
+                <table>
+                    <tr>
+                        <td><a href="padding.html">余白とボックス<br>padding/margin</a></td>
+                        <td><a href="float.html">横並びと解除<br>float</a></td>
+                        <td><a href="position.html">自由な配置<br>position</a></td>
+                        <td><a href="animation.html">接頭辞と要素の変形<br>Transforme</a></td>
+                        <td><a href="display.html">ボックスの機能変換<br>BlockBox/InlineBox</a></td>
+                        <td><a href="RWD.html">レスポンシブWebデザイン(RWD)<br>スマホ対応</a></td>
+                        <td><a href="other.html">その他<br>other</a></td>
+                    </tr>
+                </table>
+            </nav>
+            <br>
+            <h2>ボックスの機能変換</h2>
+                <ul>
+                    <li><a href="#Visibility">要素の非表示　visibilityプロパティ</a></li>
+                    <li><a href="#Display">要素の持つ表示形式を変更　displayプロパティ</a></li>
+                    <li><a href="#Block">block値の記述と表示例</a></li>
+                    <li><a href="#InlineBlock">inline-block値の記述と表示例</a></li>
+                    <li><a href="#Table-Cell">table/table-cell値の記述と表示例</a></li>
+                    <li><a href="#FlexBox">柔軟なボックス設定　Flexbox</a></li>
+                    <li><a href="#FlexDirection">flex-directionプロパティの記述と表示例</a></li>
+                    <li><a href="#FlexWrap">flex-wrapプロパティの記述と表示例</a></li>
+                    <li><a href="#FlexFlow">flex-flowプロパティの記述と表示例</a></li>
+                    <li><a href="#JustifyContent">justify-contentプロパティの記述と表示例</a></li>
+                    <li><a href="#AlignItems">align-itemsプロパティの記述と表示例</a></li>
+                    <li><a href="#AlignContent">align-contentプロパティの記述と表示例</a></li>
+                    <li><a href="#OtherFlex">その他のflexプロパティ</a></li>
+                    <li><a href="#xxxx">〇〇〇〇〇〇</a></li>
+                    <li><a href="#xxxx">〇〇〇〇〇〇</a></li>
+                    <li><a href="#xxxx">〇〇〇〇〇〇</a></li>
+                </ul>
+        </header>
+          <hr>
+       <!-- **************************************************************************-->
+       <!-- 要素の非表示　visibilityプロパティ -->
+       <!-- **************************************************************************-->
+        <section id="Visibility">
+            <h3>要素の非表示　visibilityプロパティ<a href="#">▲Top</a></h3>
+                <ul>
+                    <li>書式 ⇒ visibility: キーワード;</li>
+                       <p>キーワード：visible / hidden / collapse<br></p>
+                       <dl>
+                          <dt><strong>visible(初期値)</strong></dt>
+                            <dd>可視状態にする</dd>
+                          <dt><strong>hidden</strong></dt>
+                            <dd>不可視状態にするがレイアウトに領域は残る</dd>
+                          <dt><strong>collapse</strong></dt>
+                            <dd>行や列が不可視状態になり領域も隠れる</dd>
+                       </dl>
+                </ul>
+          </section>
+          <hr>
+       <!-- ******************************************* *******************************-->
+       <!-- 要素の持つ表示形式を変更　displayプロパティ -->
+       <!-- **************************************************************************-->
+          <section id="Display">
+            <h3>要素の持つ表示形式を変更　displayプロパティ<a href="#">▲Top</a></h3>
+                <ul>
+                    <li>書式 ⇒ display:キーワード;</li>
+                       <p>キーワード：　inline / block / none / list-item / inline-block / table / table-cell / flex<br></p>
+                       <dl>
+                          <dt><strong>inline(初期値)</strong></dt>
+                            <dd>インラインボックスで表示</dd>
+                          <dt><strong>block</strong></dt>
+                            <dd>ブロックボックスで表示(左右目一杯で改行)</dd>
+                          <dt><strong>none</strong></dt>
+                            <dd>不可視状態になり領域も生成しない</dd>
+                          <dt><strong>list-item</strong></dt>
+                            <dd>リスト項目としてマーカーを表示</dd>
+                          <dt><strong>inline-block</strong></dt>
+                            <dd>ブロックボックスとして生成されるが、周囲との関係はインラインボックスと同様に振る舞う</dd>
+                          <dt><strong>table / table-cell</strong></dt>
+                            <dd>テーブルとセルとして表示</dd>
+                          <dt><strong>flex</strong></dt>
+                            <dd>ボックス同士の関係を柔軟に配置</dd>
+                       </dl>
+                       <p>※非表示の場合visibility:hiddenよりdisplay:noneが使いやすい。<br>
+                       ※block / inline / inline-block / tableはmarginの相殺がされない。
+                       </p>
+                </ul>
+          </section>
+          <hr>
+       <!-- **************************************************************************-->
+       <!-- block値の記述と表示例 -->
+       <!-- **************************************************************************-->
+          <section id="Block">
+            <h3>block値の記述と表示例<a href="#">▲Top</a></h3>
+                <h4>横並びでメニューを作成する例</h4>
+                <p>各メニュー内の文字数が異なる場合<strong>width heightを指定すると</strong>ボタン幅が決まっているので入りきらない場合は<strong>下にはみ出してしまう</strong>。<br>
+                そのため、文字ごとにボタン領域が変わるように表示するには<strong>paddingのみ</strong>を指定する。
+                </p>
+                <div class="div-htm"><p>HTML記述
+                    <pre>
+&lt;h2&gt;widthとheightを指定した表示例&lt;/h2&gt;
+&lt;ul&gt;
+   &lt;li&gt;&lt;a class=<strong>"exp1"</strong> href="a.html"&gt;あ&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a class=<strong>"exp1"</strong> href="a.html"&gt;かきく&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a class=<strong>"exp1"</strong> href="a.html"&gt;さしすせそ&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;h2&gt;paddingのみ指定した表示例&lt;/h2&gt;
+&lt;ul&gt;
+   &lt;li&gt;&lt;a class=<strong>"exp2"</strong> href="a.html"&gt;あ&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a class=<strong>"exp2"</strong> href="a.html"&gt;かきく&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a class=<strong>"exp2"</strong> href="a.html"&gt;さしすせそ&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+                  </pre></p>
+                </div>
+                <div class="div-css"><p>CSS記述
+                    <pre>
+li {list-style-type: none;
+    <strong>float: left;</strong>}
+
+<strong>.exp1</strong> {
+    border: 1px solid;
+    <strong>display: block;</strong>
+    <strong>width:50px;</strong>
+    <strong>height:30px;</strong>
+    padding: 5px 10px;}
+
+<strong>.exp2</strong> {border: 1px solid;
+   <strong>display: block;</strong>
+   <strong>padding: 5px 10px;</strong>}
+                    </pre></p>
+                </div>
+                <div class="div-Brw"><p>ブラウザ表示</p>
+                    <div class="box-absolute">
+                    <a href="results/Display-result.html"
+                    onclick="window.open('results/Display-result.html', '_blank',
+                    'width='+w_size+', height='+h_size+', left='+l_position+', top='+t_position);return false;">結果を表示する</a>
+                    </div>
+                </div>
+         </section>
+        <hr>
+       <!-- **************************************************************************-->
+       <!-- inline-block値の記述と表示例 -->
+       <!-- **************************************************************************-->
+          <section id="InlineBlock">
+            <h3>inline-block値の記述と表示例<a href="#">▲Top</a></h3>
+                <h4>inline-blockを使用して画像を横並びにする例</h4>
+                <p>ブロック要素であるdiv要素は複数表示すると、どんどん下に積み重なって表示される。<br>
+                そのためfloatを使用して横並びにするが、このfloatを使わずに横並びできるので、<br>
+                回り込みの解除を行うなどの表示のくずれを直す手間が省くことができる。</p>
+                <div class="div-htm"><p>HTML記述
+                    <pre>
+&lt;h2&gt;div要素をそのまま表示&lt;/h2&gt;
+   &lt;div&gt;&lt;img src="../images/pc1.jpg"&gt;&lt;/div&gt;
+   &lt;div&gt;&lt;img src="../images/pc2.jpg"&gt;&lt;/div&gt;
+   &lt;div&gt;&lt;img src="../images/pc3.jpg"&gt;&lt;/div&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;h2&gt;div要素をinline-blockにして表示&lt;/h2&gt;
+   &lt;div class=<strong>"exp"</strong>&gt;&lt;img src="../images/pc1.jpg"&gt;&lt;/div&gt;
+   &lt;div class=<strong>"exp"</strong>&gt;&lt;img src="../images/pc2.jpg"&gt;&lt;/div&gt;
+   &lt;div class=<strong>"exp"</strong>&gt;&lt;img src="../images/pc3.jpg"&gt;&lt;/div&gt;
+                  </pre></p>
+                </div>
+                <div class="div-css"><p>CSS記述
+                    <pre>
+div img{width:100px; height:auto;}
+<strong>.exp {display: inline-block;}</strong>
+                    </pre></p>
+                </div>
+                <div class="div-Brw"><p>ブラウザ表示</p>
+                    <div class="box-absolute">
+                    <a href="results/InlineBlock-result.html"
+                    onclick="window.open('results/InlineBlock-result.html', '_blank',
+                    'width='+w_size+', height='+h_size+', left='+l_position+', top='+t_position);return false;">結果を表示する</a>
+                    </div>
+                </div>
+          </section>
+          <hr>
+       <!-- **************************************************************************-->
+       <!-- table/table-cell値の記述と表示例 -->
+       <!-- **************************************************************************-->
+          <section id="Table-Cell">
+            <h3>table/table-cell値の記述と表示例<a href="#">▲Top</a></h3>
+                <h4>ナビゲーション幅を固定値で表示する例</h4>
+                <p>ナビゲーションの幅が決まっている場合paddingだけで各ボタン領域を決めてしまうと、<br>
+                ブラウザによって文字幅の表示が変わるため全体幅が変わってしまう。<br>
+                そのため、table-layout: fixed; を併用しナビゲーションの幅を均等に固定することで、<br>
+                決められたナビゲーション幅でボタンサイズが均等に配分表示されるようになる。<br>
+                また幅を%を指定すればスマホのような可変サイズでも柔軟に対応できる。
+                </p>
+                <div class="div-htm"><p>HTML記述
+                    <pre>
+&lt;h2&gt;fixedを使用しない表示例&lt;/h2&gt;
+&lt;ul class="exp1"&gt;
+   &lt;li&gt;&lt;a href="a.html"&gt;研修・キャリアアップ&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href="a.html"&gt;サービス&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href="a.html"&gt;製品&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;h2&gt;fixedを使用した表示例&lt;/h2&gt;
+&lt;p&gt;決められたナビゲーション幅でボタンサイズが均等に配分され文字を中央に配置する&lt;/p&gt;
+&lt;ul class="exp2"&gt;
+   &lt;li&gt;&lt;a href="a.html"&gt;研修・キャリアアップ&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href="a.html"&gt;サービス&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href="a.html"&gt;製品&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+                  </pre></p>
+                </div>
+                <div class="div-css"><p>CSS記述
+                    <pre>
+li {list-style-type: none;}
+li {border: 1px solid; border-left: none;}
+li:first-child {border-left: 1px solid;}
+
+/* fixedを使用しない表示例 */
+.exp1 {display: table; width: 80%;}
+.exp1 li {
+  display: table-cell;
+  padding: 5px;
+  text-align: center;}
+.exp1 a {display: block;}
+
+/* fixedを使用した表示例 */
+.exp2 {display: table; width: 80%;
+    table-layout: fixed;
+}
+.exp2 li {
+  padding: 5px;
+  display: table-cell;
+  text-align: center;}
+.exp2 a {display: block;}
+                    </pre></p>
+                </div>
+                <div class="div-Brw"><p>ブラウザ表示</p>
+                    <div class="box-absolute">
+                    <a href="results/Table-Cell-result.html"
+                    onclick="window.open('results/Table-Cell-result.html', '_blank',
+                    'width='+w_size+', height='+h_size+', left='+l_position+', top='+t_position);return false;">結果を表示する</a>
+                    </div>
+                </div>
+
+          </section>
+          <hr>
+       <!-- **************************************************************************-->
+       <!-- 〇〇〇〇〇〇 -->
+       <!-- **************************************************************************-->
+          <section id="xxxx">
+            <h3>〇〇〇〇〇〇<a href="#">▲Top</a></h3>
+
+          </section>
+          <hr>
+       <!-- **************************************************************************-->
+       <!-- 〇〇〇〇〇〇 -->
+       <!-- **************************************************************************-->
+          <section id="xxxx">
+            <h3>〇〇〇〇〇〇<a href="#">▲Top</a></h3>
+
+          </section>
+          <hr>
+       <!-- **************************************************************************-->
+       <!-- 〇〇〇〇〇〇 -->
+       <!-- **************************************************************************-->
+          <section id="xxxx">
+            <h3>〇〇〇〇〇〇<a href="#">▲Top</a></h3>
+
+          </section>
+          <hr>
+       <!-- **************************************************************************-->
+       <!-- 〇〇〇〇〇〇 -->
+       <!-- **************************************************************************-->
+          <section id="xxxx">
+            <h3>〇〇〇〇〇〇<a href="#">▲Top</a></h3>
+
+          </section>
+          <hr>
+       <!-- **************************************************************************-->
+       <!-- 〇〇〇〇〇〇 -->
+       <!-- **************************************************************************-->
+          <section id="xxxx">
+            <h3>〇〇〇〇〇〇<a href="#">▲Top</a></h3>
+
+          </section>
+          <hr>
+       <!-- **************************************************************************-->
+       <!-- 〇〇〇〇〇〇 -->
+       <!-- **************************************************************************-->
+          <section id="xxxx">
+            <h3>〇〇〇〇〇〇<a href="#">▲Top</a></h3>
+
+          </section>
+          <hr>
+       <!-- **************************************************************************-->
+       <!-- 〇〇〇〇〇〇 -->
+       <!-- **************************************************************************-->
+          <section id="xxxx">
+            <h3>〇〇〇〇〇〇<a href="#">▲Top</a></h3>
+
+          </section>
+          <hr>
+       <!-- **************************************************************************-->
+       <!-- 〇〇〇〇〇〇 -->
+       <!-- **************************************************************************-->
+          <section id="xxxx">
+            <h3>〇〇〇〇〇〇<a href="#">▲Top</a></h3>
+
+          </section>
+          <hr>
+       <!-- **************************************************************************-->
+       <!-- 〇〇〇〇〇〇 -->
+       <!-- **************************************************************************-->
+          <section id="xxxx">
+            <h3>〇〇〇〇〇〇<a href="#">▲Top</a></h3>
+
+          </section>
+          <hr>
+       </div>
+    </body>
+</html>
+
+<script type="text/javascript">
+// 表示するウィンドウのサイズ
+var w_size=800;
+var h_size=600;
+
+// 表示するウィンドウの位置
+var l_position=Number((window.screen.width-w_size)/2);
+var t_position=Number((window.screen.height-h_size)/2);
+</script>

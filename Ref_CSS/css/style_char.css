@@ -1,0 +1,196 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Griffy');
+
+/*************************************************************************/
+/* グローバルスタイルを指定 */
+/*************************************************************************/
+h3{background-color: lightpink;}
+h1 { font-size :32px;}
+h2 { font-size :24px;}
+h3 { font-size :19px;}
+h4 { font-size :17px;}
+
+
+/*******************************************************************************/
+/**　文字色リファレンス*/
+/*******************************************************************************/
+#CorProp-001{color: red;}
+#CorProp-002 {color:#ff0000;}
+
+/*******************************************************************************/
+/**　文字サイズリファレンス*/
+/*******************************************************************************/
+#FontSize-h1001{font-size:32px;}
+#FontSize-h1002{font-size:200%;}
+#FontSize-h1003{font-size:2em;}
+#FontSize-h1004{font-size:2rem;}
+
+#FontSize-h2001{font-size:24px;}
+#FontSize-h2002{font-size:150%;}
+#FontSize-h2003{font-size:1.5em;}
+#FontSize-h2004{font-size:1.5rem;}
+
+#FontSize-h3001{font-size:18.72px;}
+#FontSize-h3002{font-size:117%;}
+#FontSize-h3003{font-size:1.17em;}
+#FontSize-h3004{font-size:1.17rem;}
+
+#FontSize-h4001{font-size:16px;}
+#FontSize-h4002{font-size:100%;}
+#FontSize-h4003{font-size:1em;}
+#FontSize-h4004{font-size:1rem;}
+
+#FontSize-h5001{font-size:13.28px;}
+#FontSize-h5002{font-size:83%;}
+#FontSize-h5003{font-size:0.83em;}
+#FontSize-h5004{font-size:0.83rem;}
+
+#FontSize-h6001{font-size:10.72px;}
+#FontSize-h6002{font-size:67%;}
+#FontSize-h6003{font-size:0.67em;}
+#FontSize-h6004{font-size:0.67rem;}
+
+.table-FontSize{border-collapse: collapse;}
+.table-FontSize,th,td{border: 1px solid #333333;}
+.table-FontSize,td{font-weight:normal;}
+.table-FontSize tr:nth-child(4n+1) { border-bottom-style: groove; }
+
+/*******************************************************************************/
+/**　文字太さリファレンス*/
+/*******************************************************************************/
+#table-FontWeight-01 p {font-weight: lighter;}
+#table-FontWeight-02 p {font-weight: normal;}
+#table-FontWeight-03 p {font-weight: bold;}
+#table-FontWeight-04 p {font-weight: bolder;}
+
+/*******************************************************************************/
+/**　文字種類リファレンス*/
+/*******************************************************************************/
+#FontType-001{font-size:32px; font-family: Griffy;}
+
+#LineHeight-002{line-height:1; border:1px solid; width:5em;}
+#LineHeight-003{line-height:2; border:1px solid; width:5em;}
+
+/*******************************************************************************/
+/**　文字行間リファレンス*/
+/*******************************************************************************/
+.table-LineHeight1 td{line-height:1;}
+.table-LineHeight2 td{line-height:2;}
+.table-LineHeight3 td{line-height:3;}
+
+/*******************************************************************************/
+/**　文字字間リファレンス*/
+/*******************************************************************************/
+#LetterSpacing-001{letter-spacing:10px;}
+#LetterSpacing-002{letter-spacing:0.5em;}
+
+/*******************************************************************************/
+/**　文字カーニングリファレンス*/
+/*******************************************************************************/
+#FontFeaturSettings-001{
+    font-family:"游ゴシック", "Yu Gothic Medium", YuGothic;
+}
+#FontFeaturSettings-002{
+    font-family: "游ゴシック", "Yu Gothic Medium", YuGothic;
+    font-feature-settings:"pwid"; /*pwid*/
+}
+
+/*******************************************************************************/
+/**　文字字送りリファレンス*/
+/*******************************************************************************/
+#TextIndent-001{text-indent:1em;}
+#TextIndent-002{text-indent:50%;}
+#TextIndent-003{text-indent:-10px;}
+
+/* TableのClass指定で子要素を選択するとセレクタが効かない
+.table-TextDecoration th td{
+    text-align: left;
+    background-color:white;
+    border-style:hidden;
+}
+*/
+
+/*******************************************************************************/
+/**　文字行間リファレンス*/
+/*******************************************************************************/
+.table-TextDecoration{
+    text-align: left;
+    background-color:white;
+    border-style:hidden;
+}
+.table-TextDecoration th{
+    text-align: left;
+    background-color:white;
+    border-style:hidden;
+}
+.table-TextDecoration td{
+    text-align: left;
+    background-color:white;
+    border-style:hidden;
+}
+
+#TextDecoration-001{text-decoration:none;}
+#TextDecoration-002{text-decoration:underline;}
+#TextDecoration-003{text-decoration:overline;}
+#TextDecoration-005{text-decoration:line-through;}
+
+/*******************************************************************************/
+/**　文字横揃えリファレンス*/
+/*******************************************************************************/
+.ul-TtextAlign div{border:1px solid; background-color:#f5deb3; }
+#TtextAlign-001{text-align:left;}
+#TtextAlign-002{text-align:center;}
+#TtextAlign-003{text-align:right;}
+
+#VerticalAlign-001{color:red;vertical-align: super;}
+#VerticalAlign-002{color:red;vertical-align: baseline;}
+#VerticalAlign-003{color:red;vertical-align: sub;}
+
+/*******************************************************************************/
+/**　影と透過(文字)リファレンス*/
+/*******************************************************************************/
+#TextShadow-001{
+    font-size:35px;
+    font-weight:bold;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+}
+#TextShadow-002{
+    font-size:35px;
+    font-weight:bold;
+    text-shadow:
+        0px 0px 0 rgb(235,235,235),
+        1px 1px 0 rgb(228,228,228),
+        2px 2px 0 rgb(222,222,222),
+        3px 3px 0 rgb(215,215,215),
+        4px 4px 0 rgb(209,209,209),
+        5px 5px 0 rgb(203,203,203),
+        6px 6px 5px rgba(0,0,0,0.25),
+        6px 6px 1px rgba(0,0,0,0.5);
+}
+#TextShadow-003{
+    font-size:35px;
+    font-weight:bold;
+    color: #ccc;
+    text-shadow:
+        1px 1px 0 #fff,
+        -1px -1px 0 #888,
+        0 0 20px #aaa;
+}
+/*******************************************************************************/
+/**　影と透過(要素の背景)リファレンス*/
+/*******************************************************************************/
+#BoxShadow-001{
+    width:10em;
+    font-size:35px;
+    font-weight:bold;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);    
+}
+
+#opacity-001{
+    border:1px solid;
+    width: 500px;
+    height: 300px;
+    opacity: 0.5;
+}
+#opacity-001 figcaption {font-weight:bold; color:red;}

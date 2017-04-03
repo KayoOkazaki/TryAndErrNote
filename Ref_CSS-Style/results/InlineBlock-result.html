@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <link rel="stylesheet" href="../css/sanitize.css">
+    <link rel="stylesheet" href="css/style_position.css">
+</head>
+<body>
+    <h2>div要素をそのまま表示</h2>
+       <div><img src="../images/pc1.jpg"></div>
+       <div><img src="../images/pc2.jpg"></div>
+       <div><img src="../images/pc3.jpg"></div>
+    <br><br>
+    <h2>div要素をinline-blockにして表示</h2>
+       <div class="exp"><img src="../images/pc1.jpg"></div>
+       <div class="exp"><img src="../images/pc2.jpg"></div>
+       <div class="exp"><img src="../images/pc3.jpg"></div>
+
+
+</body>
+<!-- *********************************************************************** -->
+<!-- CSS -->
+<!-- *********************************************************************** -->
+<style>
+div img{width:100px; height:auto;}
+.exp {display: inline-block;}
+
+ </style>
+ </html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../css/sanitize.css">
+    </head>
+    <body>
+
+       <!-- *************************************************************************************************-->
+       <!-- HTMLとCSSとブラウザの表示例を作成する雛型 -->
+       <!-- *************************************************************************************************-->
+       <section class="Template">
+
+            <!-- **[ STEP1 ]********************************************************-->
+                    <h4>１．表題を記述します</h4>
+                        <p>説明を記述します</p>
+                        <div class="htm"><p>HTML記述
+                            <pre>
+&lt;　ここに解説するためのHTMLタグを記述します　&gt;
+                            </pre></p>
+                        </div>
+                        <div class="css"><p>CSS記述
+                            <pre>
+　ここに解説するためのCSSを記述します　
+                            </pre></p>
+                        </div>
+                        <div class="Brw"><p>ブラウザ表示</p>
+                            <div class="box-1" id="box-1-hoge"><p>メイン</p></div>
+                            <div class="box-2" id="box-2-hoge"><p>サイド</p></div>
+                            <div class="box-3" id="box-3-hoge"><p>フッター</p></div>
+                        </div>
+        </section>
+
+    </body>
+<!-- *************************************************************************************************-->
+<!-- CSS雛型 -->
+<!-- *************************************************************************************************-->
+<style>
+.htm {border: 1px solid; width: 30%; float: left; padding: 3px; margin: 5px 10px 35px 5px;}
+.css {border: 1px solid; width: 25%; float: left; padding: 3px; margin: 5px 10px 35px 5px;}
+.Brw {border: 1px solid; width: 30%; float: left; padding: 3px; margin: 5px 10px 35px 5px;}
+
+.Section_Step h4 {clear: both;}
+
+.htm > p {font-weight: bold; background-color:pink; margin:1px;}
+.css > p {font-weight: bold; background-color:lightblue; margin:1px}
+.Brw > p {
+    font-weight: bold; 
+    margin-bottom:10px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);    
+}
+
+pre strong {
+	font-size:15px !important; 
+}
+.Brw .box-1{background-color:#bbb; width: 60%; height: 60px; padding:0;}
+.Brw .box-2{background-color:#888; width: 30%; height: 60px; padding:0; }
+.Brw .box-3{background-color:blue; height: 25px; padding:0;}
+
+.Brw .box-3 p{color:white; text-align :center; } 
+
+</style>

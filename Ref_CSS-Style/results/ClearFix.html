@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <link rel="stylesheet" href="../css/sanitize.css">
+        <link rel="stylesheet" href="css/style_position.css">
+    </head>
+    <body>
+        <p>clearfixなしの表示</p>
+        <div class="a"><p>a</p>
+            <div class="b">b</div>
+            <div class="c">c</div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <p>clearfixを設定した表示</p>
+        <div class="a clearfix"><p>a</p>
+            <div class="b">b</div>
+            <div class="c">c</div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+     </body>
+    <!-- *********************************************************************** -->
+    <!-- CSS -->
+    <!-- *********************************************************************** -->
+    <style>
+        .a {
+            width: 100%;
+            padding: 0 5px 5px;
+            background-color: blue;
+            border: 1px solid;
+        }
+        .a p{color:#fff;}
+
+        .b,.c {
+            height: 50px;
+            background-color: #ccc;
+            border: 1px solid;
+        }
+ 
+        .clearfix .b { width: 68%; float: left;}
+        .clearfix .c { width: 30%; float: right;}
+
+        .clearfix::after {
+            content: "";
+            display:block;
+            clear:both;
+        }
+    </style>
+</html>
