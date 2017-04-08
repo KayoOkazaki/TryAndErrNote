@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="HTMLリファレンス">
+        <meta name="keywords" content="html,リファレンス,">
+        <title>HTMLリファレンス</title>
+        <link rel="stylesheet" href="../css/init.css">
+        <link rel="stylesheet" href="css/h-init.css">
+    </head>
+    <body>
+     <div class="wrapper">
+        <header>
+            <h1>HTMLリファレンス</h1>
+            <div id="Ret"><a href="../index.html">WEB開発入門 メニューに戻る</a></div>
+<!--             <nav>
+                <table>
+                    <tr>
+                        <td><a href="padding.html">余白とボックス<br>padding/margin</a></td>
+                        <td><a href="float.html">横並びと解除<br>float</a></td>
+                        <td><a href="position.html">自由な配置<br>position</a></td>
+                        <td><a href="animation.html">接頭辞と要素の変形<br>Transforme</a></td>
+                        <td><a href="display.html">ボックスの機能変換<br>BlockBox/InlineBox</a></td>
+                        <td><a href="RWD.html">レスポンシブWebデザイン(RWD)<br>スマホ対応</a></td>
+                        <td><a href="other.html">その他<br>other</a></td>
+                    </tr>
+                </table>
+            </nav>
+            <br> -->
+<!--             <h2>〇〇〇〇〇〇</h2> -->
+                <ul>
+                    <li><a href="#style">CSS設定ファイルの読込</a></li>
+                    <li><a href="#rwd">RWD設定ファイルの読込</a></li>
+                    <li><a href="#js">java scriptファイルの読込</a></li>
+                    <li><a href="#tel">telの自動変換機能を無効</a></li>
+                    <li><a href="#viewport">スマホ画面の幅の倍率を原寸に指定</a></li>
+                    <li><a href="#fabicon">ファビコンの設定</a></li>
+                    <li><a href="#ico">スマホアイコンの設定</a></li>
+                    <li><a href="#link">リンク : a href=""</a></li>
+                    <li><a href="#li">リスト : ul要素 ol要素</a></li>
+                    <li><a href="#dl">定義リスト : dl要素</a></li>
+                    <li><a href="#table">テーブル : table要素</a></li>
+                    <li><a href="#time">time要素 : time datetime=""</a></li>
+                    <li><a href="#img">画像を表示 : img src=""</a></li>
+                    <li><a href="#form">入力フォーム : input type=""</a></li>
+                    <li><a href="#map">GoogleMapの設定 : iframe</a></li>
+                    <li><a href="#youtube">Youtubeの設定 : iframe</a></li>
+                    <li><a href="#awesome">Font Awesomeの使用例</a></li>
+                </ul>
+        </header>
+          <hr>
+       <!-- **************************************************************************-->
+       <!-- CSS設定ファイルの読込 -->
+       <!-- **************************************************************************-->
+        <section id="style">
+            <h3>CSS設定ファイルの読込<a href="#">▲Top</a></h3>
+            <h4>href属性にhtmlファイルからみたCSSファイルが保存してある相対パスを指定する</h4>
+            <div class="div-htm" style="width:60%;">
+            <h3>HTML記述</h3>
+            <p><pre>
+&lt;head&gt;
+    &lt;link rel="stylesheet" href=<strong>"css/style.css"</strong> type="text/css"&gt;
+    省略
+&lt;/head&gt;
+            </pre></p>
+            </div>
+          </section>
+          <hr>
+       <!-- **************************************************************************-->
+       <!-- RWD設定ファイルの読込 -->
+       <!-- **************************************************************************-->
+          <section id="rwd">
+            <h3>RWD設定ファイルの読込<a href="#">▲Top</a></h3>
+            <h4>スマホ対応</h4>
+            <p>レスポンシブWEBデザイン（RWD）が設定済みのCSSファイルを、<br>
+            media属性に指定した条件により読込を行う。<br>
+            以下例では<strong>横幅が最大480pxまで</strong>のスマホ画面に、rwd.CSSファイルを適用する指定となる</p>
+            <div class="div-htm" style="width:60%;">
+            <h3>HTML記述</h3>
+            <p><pre>
+&lt;head&gt;
+    &lt;link rel="stylesheet" media=<strong>"screen and (max-width: 480px)"</strong> href="css/rwd.css" /&gt;
+    省略
+&lt;/head&gt;
+            </pre></p>
+            </div>
+          </section>
+          <hr>
+       <!-- **************************************************************************-->
+       <!-- java scriptファイルの読込 -->
+       <!-- **************************************************************************-->
+          <section id="js">
+            <h3>java scriptファイルの読込<a href="#">▲Top</a></h3>
+            <h4>src属性にhtmlファイルからみたJavaScriptファイルが保存してある相対パスを指定する</h4>
+            <div class="div-htm" style="width:60%;">
+              <h3>HTML記述</h3>
+              <p><pre>&lt;script src=<strong>"js/jsfile.js"</strong>&gt;&lt;/script&gt;
+              </pre></p>
+            </div>
+          </section>
+          <hr>
+       <!-- **************************************************************************-->
+       <!-- telの自動変換機能を無効 -->
+       <!-- **************************************************************************-->
+          <section id="tel">
+            <h3>telの自動変換機能を無効<a href="#">▲Top</a></h3>
+            <h4>スマホ表示時の電話番号の自動リンクを外す</h4>
+            <p>スマホ表示では文書中の電話番号をタップすると自動でかける機能があるが<br>
+            数字の羅列も電話番号と誤認識し、<strong>意図しない数字にリンクが設定</strong>されてしまう。<br>
+            この機能を無効にして任意の電話番号だけリンクを付ける方法がある。</p>
+            <dl>
+              <dt>telの自動変換機能を無効</dt>
+              <dd><div class="div-htm" style="width:60%;">
+              <h3>HTML記述</h3>
+              <p><pre>
+&lt;head&gt;
+    &lt;meta name="format-detection" content="telephone=no"&gt;
+    省略
+&lt;/head&gt;
+                </pre></p>
+              </div></dd>
+              <dt>任意の電話番号だけリンクを付ける</dt>
+              <dd><div class="div-htm" style="width:60%;">
+                <h3>HTML記述</h3>
+                <p><pre>&lt;a href=<strong>"tel:0312345678"</strong>&gt;03-1234-5678&lt;/a&gt;
+                </pre></p>
+              </div></dd>
+            </dl>
+          </section>
+          <hr>
+       <!-- **************************************************************************-->
+       <!-- スマホ画面の幅の倍率を原寸に指定 -->
+       <!-- **************************************************************************-->
+          <section id="viewport">
+            <h3>スマホ画面の幅の倍率を原寸に指定<a href="#">▲Top</a></h3>
+            <h4>スマホ仮想ウィンドウサイズを変更</h4>
+              <p>viewportはスマホで表示する仮想ウインドウのサイズ（初期値980px）を指定する属性。<br>
+              この指定を<strong>初期値980px</strong>のままでPCサイトをスマホで見ると、<strong>ページ全体が縮小</strong>され<br>
+              スマホ画面にピッタリのサイズに収まるように表示される。<br>
+              そのままの状態では文字は細かくて読みづらく、また正しい場所をタップすることが困難な状態になる。<br>
+              そのためいったん<strong>原寸大の100％表示</strong>をした上で、表示しやすい設定を行う必要がある。<br>
+              この原寸大100％に設定する方法が以下である。</p>
+            <div class="div-htm" style="width:60%;">
+            <h3>HTML記述</h3>
+            <p><pre>
+&lt;head&gt;
+    &lt;meta name=<strong>"viewport"</strong> content=<strong>"width=device-width,initial-scale=1"</strong>&gt;
+    省略
+&lt;/head&gt;
+            </pre></p>
+            </div>
+          </section>
+          <hr>
+       <!-- **************************************************************************-->
+       <!-- ファビコンの設定 -->
+       <!-- **************************************************************************-->
+          <section id="fabicon">
+            <h3>ファビコンの設定<a href="#">▲Top</a></h3>
+            <h4>ファビコンとは</h4>
+            <img src="images/fabicon1.JPG" alt="ファビコンの表示例">
+            <p>ブラウザのタブやお気に入り登録時に表示されるアイコンをファビコンという。<br>
+            設定は以下の通りhref属性に表示したいicoファイルの相対パスを指定する。<br>
+            <a href="https://liginc.co.jp/web/design/material/16853" target="_blank">icoファイルの作成方法</a>　<a href="https://www.freefavicon.com/freefavicons/" target="_blank">Freeのファビコン素材集</a>
+            </p>
+            <div class="div-htm" style="width:60%;">
+            <h3>HTML記述</h3>
+            <p><pre>
+&lt;head&gt;
+    &lt;link rel=<strong>"icon"</strong> type=<strong>"image/ico"</strong> href="images/tmfav39705.ico"&gt;
+    省略
+&lt;/head&gt;
+            </pre></p>
+            </div>
+          </section>
+          <hr>
+       <!-- **************************************************************************-->
+       <!-- スマホアイコンの設定 -->
+       <!-- **************************************************************************-->
+          <section id="ico">
+            <h3>スマホアイコンの設定<a href="#">▲Top</a></h3>
+            <p>スマホ画面に表示されるアイコン<br>
+            設定は以下の通りhref属性に表示したい画像ファイルの相対パスを指定する。<br>
+            </p>
+            <div class="div-htm" style="width:60%;">
+            <h3>HTML記述</h3>
+            <p><pre>&lt;link rel=<strong>"apple-touch-icon"</strong> href="images/icon_3g_128.png"&gt;
+            </pre></p>
+            </div>
+          <hr>
+       <!-- **************************************************************************-->
+       <!-- リンク : a href="" -->
+       <!-- **************************************************************************-->
+          <section id="link">
+            <h3>リンク : a href=""<a href="#">▲Top</a></h3>
+              <dl>
+                <dt>指定URLへジャンプ</dt>
+                <dd>
+                  新しいタブを開かずに<strong>今表示しているページ</strong>を指定URLにジャンプ表示する。<br>
+                    <div class="div-htm">
+                    <h3>HTML記述</h3>
+                    <p><pre>&lt;a href="https://www.google.co.jp/"&gt;リンク先(Google)にジャンプ&lt;/a&gt;
+                    </pre></p>
+                    </div>
+                    <div class="div-Brw"><h3>ブラウザ表示</h3>
+                        <div>
+                          <a href="https://www.google.co.jp/">リンク先(Google)にジャンプ</a><br>
+                        </div>
+                    </div>
+                </dd>
+                <dt>指定URLへ別ウィンドウでジャンプ</dt>
+                <dd>
+                  新しいタブを開き<strong>今表示しているページとは別</strong>に指定URLにジャンプ表示する<br>
+                    <div class="div-htm">
+                    <h3>HTML記述</h3>
+                    <p><pre>&lt;a href="https://www.google.co.jp/" <strong>target="_blank"</strong>&gt;外部リンク先(Google)にジャンプ&lt;/a&gt;
+                    </pre></p>
+                    </div>
+                    <div class="div-Brw">
+                        <h3>ブラウザ表示</h3>
+                        <div>
+                            <a href="https://www.google.co.jp/" target="_blank">外部リンク先(Google)にジャンプ</a><br>
+                        </div>
+                    </div>
+                </dd>
+              </dl>
+          <hr>
+       <!-- **************************************************************************-->
+       <!-- リスト : ul要素 ol要素 -->
+       <!-- **************************************************************************-->
+          <section id="li">
+            <h3>リスト : ul要素 ol要素<a href="#">▲Top</a></h3>
+            <dl>
+              <dt>番号なしリスト : ul li</dt>
+              <dd>
+                  リストの先頭に記号（●）が付く<br>
+                    <div class="div-htm">
+                    <h3>HTML記述</h3>
+                    <p><pre>
+        &lt;ul&gt;
+            &lt;li&gt;白くま&lt;/li&gt;
+            &lt;li&gt;ライオン&lt;/li&gt;
+            &lt;li&gt;クロヒョウ&lt;/li&gt;
+            &lt;li&gt;チンパンジー&lt;/li&gt;
+            &lt;li&gt;山猫&lt;/li&gt;
+        &lt;/ul&gt;
+                    </pre></p>
+                    </div>
+                    <div class="div-Brw"><h3>ブラウザ表示</h3>
+                        <div>
+                            <ul>
+                                <li>白くま</li>
+                                <li>ライオン</li>
+                                <li>クロヒョウ</li>
+                                <li>チンパンジー</li>
+                                <li>山猫</li>
+                            </ul>
+                        </div>
+                    </div>
+              </dd>
+              <dt>番号付きリスト : ol li</dt>
+              <dd>
+                  リストの先頭に数字（1.～…）が付く<br>
+                  <div class="div-htm"><h3>HTML記述</h3><p><pre>
+        &lt;h4&gt;カレーの作り方&lt;/h4&gt;
+            &lt;ol&gt;
+                &lt;li&gt;肉と野菜を炒める&lt;/li&gt;
+                &lt;li&gt;水を入れて中火で煮込む&lt;/li&gt;
+                &lt;li&gt;時々アクを取る&lt;/li&gt;
+                &lt;li&gt;カレールーを入れる&lt;/li&gt;
+                &lt;li&gt;とろみがつくまで弱火で煮込む&lt;/li&gt;
+            &lt;/ol&gt;
+                  </pre></p>
+                  </div>
+                  <div class="div-Brw"><h3>ブラウザ表示</h3>
+                      <div>
+                        <h4>カレーの作り方</h4>
+                          <ol>
+                              <li>肉と野菜を炒める</li>
+                              <li>水を入れて中火で煮込む</li>
+                              <li>時々アクを取る</li>
+                              <li>カレールーを入れる</li>
+                              <li>とろみがつくまで弱火で煮込む</li>
+                          </ol>
+                      </div>
+                  </div>
+              </dd>
+            </dl>
+          <hr>
+       <!-- **************************************************************************-->
+       <!-- 定義リスト : dl要素 -->
+       <!-- **************************************************************************-->
+          <section id="xxxx">
+            <h3>定義リスト : dl要素<a href="#">▲Top</a></h3>
+&lt;&gt;
+          <hr>
+       <!-- **************************************************************************-->
+       <!-- 〇〇〇〇〇〇 -->
+       <!-- **************************************************************************-->
+          <section id="xxxx">
+            <h3>〇〇〇〇〇〇<a href="#">▲Top</a></h3>
+&lt;&gt;
+          <hr>
+       <!-- **************************************************************************-->
+       <!-- 〇〇〇〇〇〇 -->
+       <!-- **************************************************************************-->
+          <section id="xxxx">
+            <h3>〇〇〇〇〇〇<a href="#">▲Top</a></h3>
+&lt;&gt;
+          <hr>
+       <!-- **************************************************************************-->
+       <!-- 〇〇〇〇〇〇 -->
+       <!-- **************************************************************************-->
+          <section id="xxxx">
+            <h3>〇〇〇〇〇〇<a href="#">▲Top</a></h3>
+&lt;&gt;
+
+          </section>
+          <hr>
+       </div>
+    </body>
+</html>
+
+<script type="text/javascript">
+// 表示するウィンドウのサイズ
+var w_size=800;
+var h_size=600;
+
+// 表示するウィンドウの位置
+var l_position=Number((window.screen.width-w_size)/2);
+var t_position=Number((window.screen.height-h_size)/2);
+</script>

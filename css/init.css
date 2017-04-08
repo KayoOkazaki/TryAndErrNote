@@ -2,16 +2,21 @@
 @import url('https://fonts.googleapis.com/css?family=Griffy');
 /** ADD-S ****************************************************************************************/
 body pre {
-    font-family: 'Quicksand', "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", 
+    font-family: 'Quicksand', "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro",
     "Hiragino Kaku Gothic Pro", 'メイリオ' , Meiryo , Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
     color:#444;
 }
 body{
-    font-family: 'Quicksand', "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", 
+    font-family: 'Quicksand', "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro",
     "Hiragino Kaku Gothic Pro", 'メイリオ' , Meiryo , Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
     color:#444;
 }
-
+dt {
+    font-weight: bold;
+}
+dd {
+    margin-bottom: 13px;
+}
 .wrapper {
     width: 1100px;
     margin: 0 auto;  /*画面の中央配置*/
@@ -20,7 +25,7 @@ body{
 }
 
 /*WEB開発入門 メニューに戻る***/
-#Ret :nth-child(1){ 
+#Ret :nth-child(1){
     font-weight: bold;
     font-size: 19px;
     padding:5px;
@@ -51,13 +56,13 @@ table,td,th {
 strong{
     color: #444;
     background: linear-gradient(transparent 55%, #ff0 55%) !important;
-    padding: 0 2px;    
+    padding: 0 2px;
 }
 
 pre strong{
     color: #444;
     background: linear-gradient(transparent 55%, lawngreen 55%) !important;
-    padding: 0 2px;    
+    padding: 0 2px;
 }
 
 h3 a{font-size:16px;}
@@ -70,7 +75,7 @@ nav td{
     text-align: center;
     font-size:18px;
 }
-li{font-size:18.72px; font-weight:bold}
+li{font-size:18.72px;}
 
 th{background-color: #999999;}
 table th{font-weight: bold;}
