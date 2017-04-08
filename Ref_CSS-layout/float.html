@@ -2,8 +2,8 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <meta name="description" content="CSSスタイル|横並びと解除">
-        <meta name="keywords" content="CSSスタイル,html,リファレンス,">
+        <meta name="description" content="CSSレイアウト|横並びと解除">
+        <meta name="keywords" content="CSSレイアウト,html,リファレンス,">
         <title>横並びと解除</title>
         <link rel="stylesheet" href="../css/init.css">
         <link rel="stylesheet" href="css/s-init.css">
@@ -12,7 +12,7 @@
     <body>
      <div class="wrapper">
         <header>
-            <h1>CSSスタイルリファレンス</h1>
+            <h1>CSSレイアウトリファレンス</h1>
             <div id="Ret"><a href="../index.html">WEB開発入門 メニューに戻る</a></div>
             <nav>
                 <table>
@@ -69,7 +69,7 @@
        <!-- **************************************************************************-->
           <section id="Section_Step">
             <h3>回り込み～解除までのステップ<a href="#">▲Top</a></h3>
-                    
+
              <!-- **[ STEP1 ]********************************************************-->
                     <h4>１．ボックス（ブロック要素）をただ並べただけの表示</h4>
                         <p><strong>ブロック要素</strong>のdiv要素をhtmlで並べると、ブラウザ表示の結果はどんどんボックスが下に積み重ねられ<strong>下方向に</strong>広がっていく。<br>
@@ -86,11 +86,11 @@
                         <div class="div-css">
                             <p>CSS記述
                             <pre>
-<strong>.box-1</strong> { 
-    width:68%; height:60px; 
+<strong>.box-1</strong> {
+    width:68%; height:60px;
 }
 <strong>.box-2</strong>{
-    width:30%; height:60px; 
+    width:30%; height:60px;
 }
 <strong>.box-3</strong>{
     height:25px;
@@ -98,7 +98,7 @@
                             </pre></p>
                         </div>
                         <div class="div-Brw"><p>ブラウザ表示</p>
-                            <a href="results/ClearFix.html" 
+                            <a href="results/ClearFix.html"
                             onclick="window.open('results/Clear_step1.html', '_blank',
                             'width='+w_size+', height='+h_size+', left='+l_position+', top='+t_position);return false;">結果を表示する</a>
                         </div>
@@ -118,11 +118,11 @@
                             <p>CSS記述
                             <pre>
 .box-1{
-    width:68%; height:60px; 
+    width:68%; height:60px;
     <strong>float:left;</strong> }
 
 .box-2{
-    width:30%; height:60px; 
+    width:30%; height:60px;
     <strong>float:right;</strong> }
 
 .box-3{
@@ -130,7 +130,7 @@
                             </pre></p>
                         </div>
                         <div class="div-Brw"><p>ブラウザ表示</p>
-                            <a href="results/ClearFix.html" 
+                            <a href="results/ClearFix.html"
                             onclick="window.open('results/Clear_step2.html', '_blank',
                             'width='+w_size+', height='+h_size+', left='+l_position+', top='+t_position);return false;">結果を表示する</a>
                         </div>
@@ -152,24 +152,24 @@
                             <p>CSS記述
                             <pre>
 .box-1{
-    width:68%; 
-    height:60px; 
-    float:left; 
+    width:68%;
+    height:60px;
+    float:left;
     <strong>margin-bottom:10px;</strong>}
 
 .box-2{
-    width:30%; 
-    height:60px; 
-    float:right; 
+    width:30%;
+    height:60px;
+    float:right;
     <strong>margin-bottom:10px;</strong>}
 
 .box-3{
-    height:25px; 
+    height:25px;
     <strong>clear:both;</strong>}
                             </pre></p>
                         </div>
                         <div class="div-Brw"><p>ブラウザ表示</p>
-                            <a href="results/ClearFix.html" 
+                            <a href="results/ClearFix.html"
                             onclick="window.open('results/Clear_step3.html', '_blank',
                             'width='+w_size+', height='+h_size+', left='+l_position+', top='+t_position);return false;">結果を表示する</a>
                         </div>
@@ -187,7 +187,7 @@
                         <strong>visible</strong>：　ボックスからはみ出して表示されます。初期値<br>
                         <strong>scroll</strong>：　入りきらない内容はスクロールして見られるようになります。<br>
                         <strong>hidden</strong>：　はみ出た部分は表示されません。<br>
-                        <strong>auto</strong>：　ブラウザに依存します（一般的にはスクロールして見られるようになります）。<br>                       
+                        <strong>auto</strong>：　ブラウザに依存します（一般的にはスクロールして見られるようになります）。<br>
                        </p>
                 </ul>
           </section>
@@ -235,7 +235,7 @@
                         </div>
                         <div class="div-Brw"><p>ブラウザ表示</p>
                             <div class="box-ClearFix">
-                            <a href="results/ClearFix.html" 
+                            <a href="results/ClearFix.html"
                             onclick="window.open('results/ClearFix.html', '_blank',
                             'width='+w_size+', height='+h_size+', left='+l_position+', top='+t_position);return false;">結果を表示する</a>
                             </div>
