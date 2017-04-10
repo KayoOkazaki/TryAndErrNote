@@ -18,7 +18,8 @@ dd {
     margin-bottom: 13px;
 }
 .wrapper {
-    width: 1100px;
+    width: 960px;
+    /*width: 100%;*/
     margin: 0 auto;  /*画面の中央配置*/
     padding: 0 40px;
     box-shadow: 0 0 10px #888;

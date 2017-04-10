@@ -40,17 +40,41 @@
         </header>
           <hr>
        <!-- **************************************************************************-->
-       <!-- 〇〇〇〇〇〇 -->
+       <!-- モーダルウィンドウ -->
        <!-- **************************************************************************-->
         <section id="xxxx">
-            <h3>〇〇〇〇〇〇<a href="#">▲Top</a></h3>
-                <ul>
-                    <li>書式 ⇒ :値;</li>
-                       <p>値：<br></p>
-                    <li>表示例</li>
-                       <span id="xxxx-001"></span>
-                       <span id="xxxx-002"></span>
-                </ul>
+            <h3>モーダルウィンドウ<a href="#">▲Top</a></h3>
+            <p>モーダルウィンドウとは、GUIシステムで、ユーザーに注意を促したり、選択肢を提示したり、緊急の状態を知らせたりする目的でよく使われる。
+            モーダルダイアログやポップアップと呼ばれることもある"modal"とは「モードを持つ」という意味であり、モーダルウィンドウが表示されている間はアプリケーションの状態が「ユーザーの応答待ちモード」になっている。
+            対義語は"modeless"（モードレス）である。ウィキペディアより</p>
+            <h4>プラグイン： Colorbox (author:Jack Moore)</h4>
+            <p>レストランサイトのメニューや商品画像やなど小さい画像一覧のなかから画像をクリックしたときに、<br>
+            拡大写真が表示されるように実装されることが多い。<p>
+            <a href="demo/colorbox/demo.html"
+            onclick="window.open('demo/colorbox/demo.html', '_blank',
+            'width='+w_size+', height='+h_size+', left='+l_position+', top='+t_position);return false;">デモを表示する</a><br>
+             <a href="http://www.jacklmoore.com/colorbox/">Colorboxダウンロード</a>
+            <h5>colorbox実装例</h5>
+            <div><img src="images/jq_src1.JPG" alt="jQuerySource"><figcaption>jQuery Source</figcaption></div><br>
+            <div><img src="images/html_src1.JPG" alt="htmlSource"><figcaption>HTML   Source</figcaption></div>
+             <dl>
+               <dt>Elastic Transition</dt>
+               <dd>初期値のためプロパティの設定なし（Transition:"Elastic"） <br>
+               次画面へ遷移するとき、グループの画像サイズが相違する場合、伸縮しながらエフェクト表示される。<br>
+               サイズが同じ場合は変化なし。
+               </dd>
+               <dt>Fade Transition</dt>
+               <dd>プロパティの設定　Transition："Fade" <br>
+               次画面へ遷移するとき、フェードインフェードアウトしながらエフェクト表示する。
+               </dd>
+               <dt>No Transition + fixed width and height (75% of screen size)</dt>
+               <dd>プロパティの設定　transition:"none", width:"75%", height:"75%"<br>
+               次画面へ遷移するエフェクト表現なし、画面サイズを指定できる。デモは横幅と高さを75%で表示。
+               </dd>
+              <dt>Slideshow</dt>
+              <dd>プロパティの設定　slideshow:true<br>
+              スライドショーで表示する。</dd>
+             </dl>
           </section>
           <hr>
        <!-- **************************************************************************-->

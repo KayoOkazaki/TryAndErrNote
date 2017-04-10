@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'/>
+		<title>Colorbox Examples</title>
+		<style>
+			body{font:12px/1.2 Verdana, sans-serif; padding:0 10px;}
+			a:link, a:visited{text-decoration:none; color:#416CE5; border-bottom:1px solid #416CE5;}
+			h2{font-size:13px; margin:15px 0 0 0;}
+		</style>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/colorbox.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="js/jquery.colorbox.js"></script>
+		<script>
+			$(document).ready(function(){
+				//Examples of how to assign the Colorbox event to elements
+				$(".group1").colorbox({rel:'group1'});
+				$(".group2").colorbox({rel:'group2', transition:"fade"});
+				$(".group3").colorbox({rel:'group3', transition:"none", width:"75%", height:"75%"});
+				$(".group4").colorbox({rel:'group4', slideshow:true});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Colorbox Demonstration</h1>
+		<h2>Elastic Transition</h2>
+		<div class="contaner">
+			<div class="food"><a class="group1" href="content/food1.jpg" title="Susi"><img src="content/food1.jpg" width="200" alt=""></a></div>
+			<div class="food"><a class="group1" href="content/food2.jpg" title="Piza"><img src="content/food2.jpg" width="200" alt=""></a></div>
+			<div class="food"><a class="group1" href="content/food3.jpg" title="Grilled meat"><img src="content/food3.jpg" width="200" alt=""></a></div>
+			<div class="food"><a class="group1" href="content/food4.jpg" title="Maindish"><img src="content/food4.jpg" width="200" alt=""></a></div>
+			<div class="food"><a class="group1" href="content/food5.jpg" title="Hamburger"><img src="content/food5.jpg" width="200" alt=""></a></div>
+			<div class="food"><a class="group1" href="content/food6.jpg" title="Bread"><img src="content/food6.jpg" width="200" alt=""></a></div>
+		</div>
+		<br><hr>
+		<h2>Fade Transition</h2>
+		<div class="contaner">
+			<div class="food"><a class="group2" href="content/food1.jpg" title="Susi"><img src="content/food1.jpg" width="200" alt=""></a></div>
+			<div class="food"><a class="group2" href="content/food2.jpg" title="Piza"><img src="content/food2.jpg" width="200" alt=""></a></div>
+			<div class="food"><a class="group2" href="content/food3.jpg" title="Grilled meat"><img src="content/food3.jpg" width="200" alt=""></a></div>
+			<div class="food"><a class="group2" href="content/food4.jpg" title="Maindish"><img src="content/food4.jpg" width="200" alt=""></a></div>
+			<div class="food"><a class="group2" href="content/food5.jpg" title="Hamburger"><img src="content/food5.jpg" width="200" alt=""></a></div>
+			<div class="food"><a class="group2" href="content/food6.jpg" title="Bread"><img src="content/food6.jpg" width="200" alt=""></a></div>
+		</div>
+		<br><hr>
+		<h2>No Transition + fixed width and height (75% of screen size)</h2>
+		<div class="contaner">
+			<div class="food"><a class="group3" href="content/food1.jpg" title="Susi"><img src="content/food1.jpg" width="200" alt=""></a></div>
+			<div class="food"><a class="group3" href="content/food2.jpg" title="Piza"><img src="content/food2.jpg" width="200" alt=""></a></div>
+			<div class="food"><a class="group3" href="content/food3.jpg" title="Grilled meat"><img src="content/food3.jpg" width="200" alt=""></a></div>
+			<div class="food"><a class="group3" href="content/food4.jpg" title="Maindish"><img src="content/food4.jpg" width="200" alt=""></a></div>
+			<div class="food"><a class="group3" href="content/food5.jpg" title="Hamburger"><img src="content/food5.jpg" width="200" alt=""></a></div>
+			<div class="food"><a class="group3" href="content/food6.jpg" title="Bread"><img src="content/food6.jpg" width="200" alt=""></a></div>
+		</div>
+		<br><hr>
+		<h2>Slideshow</h2>
+		<div class="contaner">
+			<div class="food"><a class="group4" href="content/food1.jpg" title="Susi"><img src="content/food1.jpg" width="200" alt=""></a></div>
+			<div class="food"><a class="group4" href="content/food2.jpg" title="Piza"><img src="content/food2.jpg" width="200" alt=""></a></div>
+			<div class="food"><a class="group4" href="content/food3.jpg" title="Grilled meat"><img src="content/food3.jpg" width="200" alt=""></a></div>
+			<div class="food"><a class="group4" href="content/food4.jpg" title="Maindish"><img src="content/food4.jpg" width="200" alt=""></a></div>
+			<div class="food"><a class="group4" href="content/food5.jpg" title="Hamburger"><img src="content/food5.jpg" width="200" alt=""></a></div>
+			<div class="food"><a class="group4" href="content/food6.jpg" title="Bread"><img src="content/food6.jpg" width="200" alt=""></a></div>
+		</div>
+ -->	</body>
+</html>
