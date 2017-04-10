@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>カルーセルテスト</title>
+    <link href="css/jquery.bxslider.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script>
+        $(function(){
+            $('.bxslider').bxSlider({
+                auto: true,
+                mode: "fade",
+                speed: 1000,
+                randomStart: true
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>BxSlider</h1>
+    <ul class="bxslider">
+        <li><img src="images/photo1.jpg" /></li>
+        <li><img src="images/photo2.jpg" /></li>
+        <li><img src="images/photo3.jpg" /></li>
+        <li><img src="images/photo4.jpg" /></li>
+        <li><img src="images/photo5.jpg" /></li>
+        <li><img src="images/photo6.jpg" /></li>
+    </ul>
+</body>
+</html>

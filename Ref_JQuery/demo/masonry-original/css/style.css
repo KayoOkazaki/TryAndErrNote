@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+#masonry {
+width:100%;
+padding:10px;
+border:1px solid #EEE;
+overflow:auto;
+}
+
+.grid {
+width:220px;
+margin:5px;
+padding:10px;
+float:left;
+/*background:#424242;*/
+/*color:#fff;*/
+display:inline;
+}
+p{
+background:#424242;
+color:#fff;
+}

@@ -5,9 +5,9 @@
         <meta name="description" content="JQuery|JQueryプラグイン">
         <meta name="keywords" content="JQuery,イベントハンドラ,DOM,プラグイン">
         <title>JQuery</title>
+        <!-- <link rel="stylesheet" href="../css/sanitize.css"> -->
         <link rel="stylesheet" href="../css/init.css">
         <link rel="stylesheet" href="css/j-init.css">
-        <link rel="stylesheet" href="css/xxxx.css">
     </head>
     <body>
      <div class="wrapper">
@@ -27,8 +27,8 @@
             <br>
             <h2>JQueryプラグイン</h2>
                 <ul>
-                    <li><a href="#xxxx">モーダルウィンドウ</a></li>
-                    <li><a href="#xxxx">カルーセル</a></li>
+                    <li><a href="#Modal">モーダルウィンドウ</a></li>
+                    <li><a href="#Carousel">カルーセル</a></li>
                     <li><a href="#xxxx">メーソンリー</a></li>
                     <li><a href="#xxxx">パララックス</a></li>
                     <li><a href="#xxxx">スクロールフィックス</a></li>
@@ -42,7 +42,7 @@
        <!-- **************************************************************************-->
        <!-- モーダルウィンドウ -->
        <!-- **************************************************************************-->
-        <section id="xxxx">
+        <section id="Modal">
             <h3>モーダルウィンドウ<a href="#">▲Top</a></h3>
             <p>モーダルウィンドウとは、GUIシステムで、ユーザーに注意を促したり、選択肢を提示したり、緊急の状態を知らせたりする目的でよく使われる。
             モーダルダイアログやポップアップと呼ばれることもある"modal"とは「モードを持つ」という意味であり、モーダルウィンドウが表示されている間はアプリケーションの状態が「ユーザーの応答待ちモード」になっている。
@@ -52,57 +52,90 @@
             拡大写真が表示されるように実装されることが多い。<p>
             <a href="demo/colorbox/demo.html"
             onclick="window.open('demo/colorbox/demo.html', '_blank',
-            'width='+w_size+', height='+h_size+', left='+l_position+', top='+t_position);return false;">デモを表示する</a><br>
-             <a href="http://www.jacklmoore.com/colorbox/">Colorboxダウンロード</a>
-            <h5>colorbox実装例</h5>
+            'width='+w_size+', height='+h_size+', left='+l_position+', top='+t_position);return false;">デモを表示する</a>　　
+             <a href="http://www.jacklmoore.com/colorbox/">Colorboxダウンロード</a><br><br>
+            <h4>colorbox実装例</h4>
             <div><img src="images/jq_src1.JPG" alt="jQuerySource"><figcaption>jQuery Source</figcaption></div><br>
             <div><img src="images/html_src1.JPG" alt="htmlSource"><figcaption>HTML   Source</figcaption></div>
              <dl>
                <dt>Elastic Transition</dt>
-               <dd>初期値のためプロパティの設定なし（Transition:"Elastic"） <br>
+               <dd>初期値のためオプションの設定なし（Transition:"Elastic"） <br>
                次画面へ遷移するとき、グループの画像サイズが相違する場合、伸縮しながらエフェクト表示される。<br>
                サイズが同じ場合は変化なし。
                </dd>
                <dt>Fade Transition</dt>
-               <dd>プロパティの設定　Transition："Fade" <br>
+               <dd>オプションの設定　Transition："Fade" <br>
                次画面へ遷移するとき、フェードインフェードアウトしながらエフェクト表示する。
                </dd>
                <dt>No Transition + fixed width and height (75% of screen size)</dt>
-               <dd>プロパティの設定　transition:"none", width:"75%", height:"75%"<br>
+               <dd>オプションの設定　transition:"none", width:"75%", height:"75%"<br>
                次画面へ遷移するエフェクト表現なし、画面サイズを指定できる。デモは横幅と高さを75%で表示。
                </dd>
               <dt>Slideshow</dt>
-              <dd>プロパティの設定　slideshow:true<br>
+              <dd>オプションの設定　slideshow:true<br>
               スライドショーで表示する。</dd>
              </dl>
           </section>
           <hr>
        <!-- **************************************************************************-->
-       <!-- 〇〇〇〇〇〇 -->
+       <!-- カルーセル -->
        <!-- **************************************************************************-->
-          <section id="xxxx">
-            <h3>〇〇〇〇〇〇<a href="#">▲Top</a></h3>
-                <ul>
-                    <li>書式 ⇒ :値;</li>
-                       <p>値：<br></p>
-                    <li>表示例</li>
-                       <span id="xxxx-001"></span>
-                       <span id="xxxx-002"></span>
-                </ul>
+          <section id="Carousel">
+            <h3>カルーセル<a href="#">▲Top</a></h3>
+            <p>カルーセルとは、指定された複数画像をクルクルと順繰りに表示するプラグインで、<br>
+            ランディングページのイメージ画像に実装されることが多い。</p>
+          　 <h4>プラグイン： bxslider (author:Steven Wanderski)</h4>
+            <a href="demo/colorbox/demo.html"
+            onclick="window.open('demo/bxslider-original/index.html', '_blank',
+            'width='+w_size+', height='+h_size+', left='+l_position+', top='+t_position);return false;">デモを表示する</a>　　
+            <a href="http://bxslider.com/examples">bxsliderダウンロード</a>　　
+            <a href="http://bxslider.com/options">オプションの設定</a><br><br>
+            <h4>bxslider実装例</h4>
+            <div><img src="images/jq_src2.JPG" alt="jQuerySource"><figcaption>jQuery Source</figcaption></div><br>
+            <div><img src="images/html_src2.JPG" alt="htmlSource"><figcaption>HTML Source</figcaption></div>
+            <dl>
+              <dt>auto: true</dt>
+              <dd>true:自動でスライドスタート　false:手動でスライドスタート</dd>
+              <dt>mode: "fade"</dt>
+              <dd>スライドモード　horizontal：横スライド(初期値)　fade:フェイドアウトインで横スライド　vertical：縦スライド</dd>
+              <dt>speed:1000</dt>
+              <dd>スライドするスピードを指定。単位（ミリ秒）</dd>
+              <dt>randomStart:true</dt>
+              <dd>ture:ランダムスタート fasle:ランダムスタートなし</dd>
+            </dl>
           </section>
           <hr>
        <!-- **************************************************************************-->
-       <!-- 〇〇〇〇〇〇 -->
+       <!-- メーソンリー -->
        <!-- **************************************************************************-->
           <section id="xxxx">
-            <h3>〇〇〇〇〇〇<a href="#">▲Top</a></h3>
-                <ul>
-                    <li>書式 ⇒ :値;</li>
-                       <p>値：<br></p>
-                    <li>表示例</li>
-                       <span id="xxxx-001"></span>
-                       <span id="xxxx-002"></span>
-                </ul>
+            <h3>メーソンリー<a href="#">▲Top</a></h3>
+            <p>メーソンリーとは、指定された複数要素を石畳のように整列表示するプラグインで、<br>
+            新聞や雑誌のようなグリッドレイアウト整列で表現できる。また画面のサイズ変更に応じてレイアウトを自動的に整列されるため<br>
+            あらゆるサイズのスマホ画面での切り替えも自動でレスポンシブされる。</p>
+          　 <h4>プラグイン： Masonry (author:David DeSandro)</h4>
+            <a href="demo/masonry-original/index.html"
+            onclick="window.open('demo/masonry-original/index.html', '_blank',
+            'width='+w_size+', height='+h_size+', left='+l_position+', top='+t_position);return false;">デモを表示する</a>　　
+            <a href="http://masonry.desandro.com/">メーソンリーダウンロード</a>　　
+            <a href="http://masonry.desandro.com/options.html">オプションの設定</a><br><br>
+            <h4>Masonry実装例</h4>
+            <div><img src="images/jq_src3.JPG" alt="jQuerySource"><figcaption>jQuery Source</figcaption></div><br>
+            <div><img src="images/html_src3.JPG" alt="htmlSource"><figcaption>HTML Source</figcaption></div>
+            <div><img src="images/css_src3.JPG" alt="htmlSource"><figcaption>CSS Source</figcaption></div>
+            <dl>
+              <dt>itemSelector: '.grid'</dt>
+              <dd>整列対象の要素クラス名を指定する</dd>
+              <dt>isFitWidth: true</dt>
+              <dd>コンテナの親要素のサイズに基づいて、使用可能な列数に合わせてコンテナの幅を設定します。<br>
+              trueにすると、コンテナをCSSで中央揃えにすることができます。要素幅のパーセンテージ幅ではtrueが機能しません。<br>
+              また、項目の幅を120pxなどの固定サイズ（ピクセル単位）にする必要があります。それ以外の場合は、それぞれの要素が崩壊表示されます。
+              </dd>
+              <dt>isAnimated: true</dt>
+              <dd>true:画面サイズを変更したとき、自動でアニメーション整列を行う false:しない</dd>
+              <dt>randomStart:true</dt>
+              <dd>ture:ランダムスタート fasle:ランダムスタートなし</dd>
+            </dl>
           </section>
           <hr>
        <!-- **************************************************************************-->
